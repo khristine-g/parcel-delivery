@@ -5,7 +5,7 @@ SENDIT - PARCEL DELIVERY WEBSITE
  SendIt is a user-friendly parcel delivery website that provides reliable and efficient services for sending  packages. The platform offers  multiple delivery options and excellent customer support, ensuring a seamless experience for both senders and recipients.
 
 
-  FEATURES:
+ # FEATURES:
 1.Users can create an account and log in.
 2.Users can create a parcel delivery order.
 3.Users can change the destination of a parcel delivery order.
@@ -17,7 +17,7 @@ SENDIT - PARCEL DELIVERY WEBSITE
 
 
 
-TECHNOLOGIES:
+# TECHNOLOGIES:
 React-frontend
 Rails-backend
 
