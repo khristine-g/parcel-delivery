@@ -1,0 +1,60 @@
+.full-page{
+    background-color: #333;
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #333;
+    margin: 25px;
+  }
+  
+  .card {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #333;
+  }
+
+  
+  
+  .card img {
+    width: 250px; /* Set a fixed width for the images */
+    height: 250px; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 10px;
+  }
+  
+  .card-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  
+  .card-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .card-content button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 64px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .card-content button:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  h6{
+    color: #ccc;
+  }
+  
+  
