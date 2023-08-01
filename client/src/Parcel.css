@@ -1,0 +1,74 @@
+.forms-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .parcel-form {
+    width: 45%; /* Adjust the width as needed */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  .parcel-form h2 {
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-check-label {
+    margin-left: 5px;
+  }
+  
+  .btn-primary {
+    margin-top: 15px;
+  }
+  
+  /* Custom style for dropdown (select) */
+  .form-control.select-control {
+    appearance: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>') no-repeat right 0.75rem center;
+    background-size: 16px 16px;
+  }
+  
+  /* Custom style for form check input */
+  .form-check-input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Custom style for buttons */
+  .btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Optional: Adjust the font styles to match your design */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+  
