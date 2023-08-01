@@ -9,15 +9,19 @@ import Parcel from './components/Parcel';
 import Shipping from './components/Shipping';
 import Quote from './components/Quote';
 import ShipmentTracking from './components/ShipmentTracking';
+import Footer from "./components/footer/footer";
+import SignupPage from "./components/signup/Signup";
+
+import LoginPage from "./components/login/Login";
 
 import { Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      
         <Navbar />
-        <Routes>
+        
           <Route path="/" element={<Home />} />
           <Route path="/parcel" element={<Parcel />} />
           <Route path="/about" element={<About />} />
@@ -27,13 +31,23 @@ function App() {
           <Route path="/get-quote" element={<Quote />} />
           <Route path="/create-shipment" element={<Parcel />} />
           <Route path="/track-shipment" element={<ShipmentTracking />} />
-        </Routes>
+          <Route exact path="/">
+        <Footer />
+      </Route>
+      <Route exact path="/">
+        <LoginPage />
+      </Route>
+      <Route path="/register">
+        <SignupPage />
+      </Route>
+        
         <Shipping/>
         <Advantages />
         <Services />
         <Tracking />
         <About />
-      </Router>
+      
+
     </div>
   );
 }
