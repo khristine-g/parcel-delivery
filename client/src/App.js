@@ -10,7 +10,7 @@ import Shipping from './components/Shipping';
 import Quote from './components/Quote';
 import ShipmentTracking from './components/ShipmentTracking';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 function App() {
   return (
