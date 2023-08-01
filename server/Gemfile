@@ -30,3 +30,8 @@ end
 
 
 gem "bcrypt", "~> 3.1"
+
+gem 'devise'
+
+
+gem "byebug", "~> 11.1"

@@ -200,3 +200,2119 @@ Migrating to CreateAdmins (20230728080825)
   [1m[36mTRANSACTION (25.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/parcels" for 127.0.0.1 at 2023-07-28 11:27:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:7: syntax error, unexpected local variable or method, expecting `end'
+        render :json parcels, status: :ok
+                     ^~~~~~~
+/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:39: syntax error, unexpected local variable or method, expecting `end'
+        render :json parcel.error, status: :not_found
+                     ^~~~~~
+/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:39: syntax error, unexpected label, expecting '='
+...der :json parcel.error, status: :not_found
+...                        ^~~~~~~
+):
+  
+app/controllers/parcels_controller.rb:7: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:39: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:39: syntax error, unexpected label, expecting '='
+app/controllers/parcels_controller.rb:7: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:39: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:39: syntax error, unexpected label, expecting '='
+Started GET "/parcels" for 127.0.0.1 at 2023-07-28 11:30:40 +0300
+  
+SyntaxError (/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:39: syntax error, unexpected local variable or method, expecting `end'
+        render :json parcel.error, status: :not_found
+                     ^~~~~~
+/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:39: syntax error, unexpected label, expecting '='
+...der :json parcel.error, status: :not_found
+...                        ^~~~~~~
+):
+  
+app/controllers/parcels_controller.rb:39: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:39: syntax error, unexpected label, expecting '='
+app/controllers/parcels_controller.rb:39: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:39: syntax error, unexpected label, expecting '='
+Started GET "/parcels" for 127.0.0.1 at 2023-07-28 11:30:56 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:39: syntax error, unexpected local variable or method, expecting `end'
+        render :json parcel.error, status: :not_found
+                     ^~~~~~
+/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:39: syntax error, unexpected label, expecting '='
+...der :json parcel.error, status: :not_found
+...                        ^~~~~~~
+):
+  
+app/controllers/parcels_controller.rb:39: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:39: syntax error, unexpected label, expecting '='
+app/controllers/parcels_controller.rb:39: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:39: syntax error, unexpected label, expecting '='
+Started GET "/parcels" for 127.0.0.1 at 2023-07-28 11:32:37 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:10: syntax error, unexpected local variable or method, expecting `end'
+        render :json parcel.error, status: :not_found
+                     ^~~~~~
+/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:10: syntax error, unexpected label, expecting '='
+...der :json parcel.error, status: :not_found
+...                        ^~~~~~~
+):
+  
+app/controllers/parcels_controller.rb:10: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:10: syntax error, unexpected label, expecting '='
+app/controllers/parcels_controller.rb:10: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/parcels_controller.rb:10: syntax error, unexpected label, expecting '='
+Started GET "/parcels" for 127.0.0.1 at 2023-07-28 11:33:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:10: syntax error, unexpected '{', expecting `end'
+        render :json {error: "Parcel not found"}, s...
+                     ^
+/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:10: syntax error, unexpected '}', expecting `end'
+...son {error: "Parcel not found"}, status: :not_found
+...                              ^
+):
+  
+app/controllers/parcels_controller.rb:10: syntax error, unexpected '{', expecting `end'
+app/controllers/parcels_controller.rb:10: syntax error, unexpected '}', expecting `end'
+app/controllers/parcels_controller.rb:10: syntax error, unexpected '{', expecting `end'
+app/controllers/parcels_controller.rb:10: syntax error, unexpected '}', expecting `end'
+Started GET "/parcels" for 127.0.0.1 at 2023-07-28 11:36:12 +0300
+  
+SyntaxError (/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:11: syntax error, unexpected '{', expecting `end'
+        render :json {error: "Parcel not found"}, s...
+                     ^
+/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:11: syntax error, unexpected '}', expecting `end'
+...son {error: "Parcel not found"}, status: :not_found
+...                              ^
+):
+  
+app/controllers/parcels_controller.rb:11: syntax error, unexpected '{', expecting `end'
+app/controllers/parcels_controller.rb:11: syntax error, unexpected '}', expecting `end'
+app/controllers/parcels_controller.rb:11: syntax error, unexpected '{', expecting `end'
+app/controllers/parcels_controller.rb:11: syntax error, unexpected '}', expecting `end'
+Started GET "/parcels" for 127.0.0.1 at 2023-07-28 11:37:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:11: syntax error, unexpected '{', expecting `end'
+        render :json {error: "Parcel not found"}, s...
+                     ^
+/home/joe/Moringa/code/phase4/sendit/server/app/controllers/parcels_controller.rb:11: syntax error, unexpected '}', expecting `end'
+...son {error: "Parcel not found"}, status: :not_found
+...                              ^
+):
+  
+app/controllers/parcels_controller.rb:11: syntax error, unexpected '{', expecting `end'
+app/controllers/parcels_controller.rb:11: syntax error, unexpected '}', expecting `end'
+app/controllers/parcels_controller.rb:11: syntax error, unexpected '{', expecting `end'
+app/controllers/parcels_controller.rb:11: syntax error, unexpected '}', expecting `end'
+Started GET "/parcels" for 127.0.0.1 at 2023-07-28 11:38:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#index as */*
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 1706)
+
+
+  
+NoMethodError (undefined method `authenticate_user!' for #<ParcelsController:0x00000000003958>):
+  
+activesupport (7.0.5) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.5) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.5) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.5) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.5) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.5) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.5) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.5) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/parcels" for 127.0.0.1 at 2023-07-28 11:39:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#index as */*
+  [1m[36mParcel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "parcels" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:8:in `index'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:9:in `index'
+Completed 200 OK in 98ms (Views: 45.3ms | ActiveRecord: 1.3ms | Allocations: 43668)
+
+
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-28 17:17:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.4ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:55:in `find_parcel'
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.1ms | Allocations: 41221)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<ParcelsController:0x00000000003fc0>):
+  
+app/controllers/parcels_controller.rb:23:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-28 17:44:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.7ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:55:in `find_parcel'
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.5ms | Allocations: 41386)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<ParcelsController:0x000000000046a0>):
+  
+app/controllers/parcels_controller.rb:23:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-28 17:54:47 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:73:in `find_parcel'
+  [1m[36mCACHE Parcel Load (0.0ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:23:in `update'
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.8ms | Allocations: 42041)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<ParcelsController:0x000000000046a0>):
+  
+app/controllers/parcels_controller.rb:28:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-28 17:57:27 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.5ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:73:in `find_parcel'
+  [1m[36mCACHE Parcel Load (0.0ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:23:in `update'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms | Allocations: 2735)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<ParcelsController:0x00000000004768>):
+  
+app/controllers/parcels_controller.rb:28:in `update'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminTagtoUser (20230731075114)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "admin_tag" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731075114"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminTagtoUser (20230731075114)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "username" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "phone_number" integer DEFAULT NULL, "address" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin_tag" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","username","password_digest","email","phone_number","address","created_at","updated_at","admin_tag")
+                     SELECT "id","username","password_digest","email","phone_number","address","created_at","updated_at","admin_tag" FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "username" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "phone_number" integer DEFAULT NULL, "address" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","username","password_digest","email","phone_number","address","created_at","updated_at")
+                     SELECT "id","username","password_digest","email","phone_number","address","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230731075114"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminTagtoUser (20230731075114)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "admin_tag" boolean[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731075114"]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropAdmins (20230731080015)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "admins"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731080015"]]
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "parcels"[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "weight" integer, "password_digest" varchar, "present_location" varchar, "status" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin_tag" boolean)[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (10.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230731080015)[0m
+  [1m[35m (7.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230728072803),
+(20230728074123),
+(20230728075016),
+(20230728080825),
+(20230731075114);
+
+[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-07-31 08:02:59.649280"], ["updated_at", "2023-07-31 08:02:59.649280"]]
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "00de32f9943201fdbb647ab6062dbdabcb232c44"], ["created_at", "2023-07-31 08:02:59.686452"], ["updated_at", "2023-07-31 08:02:59.686452"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "parcels"[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "weight" integer, "password_digest" varchar, "present_location" varchar, "status" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin_tag" boolean)[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230731080015)[0m
+  [1m[35m (54.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230728072803),
+(20230728074123),
+(20230728075016),
+(20230728080825),
+(20230731075114);
+
+[0m
+  [1m[35m (118.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-07-31 08:02:59.941805"], ["updated_at", "2023-07-31 08:02:59.941805"]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2023-07-31 08:02:59.970938"], ["key", "environment"]]
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "00de32f9943201fdbb647ab6062dbdabcb232c44"], ["created_at", "2023-07-31 08:03:00.005152"], ["updated_at", "2023-07-31 08:03:00.005152"]]
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "john_doe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "phone_number", "address", "created_at", "updated_at", "admin_tag") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "john_doe"], ["password_digest", "[FILTERED]"], ["email", "john.doe@example.com"], ["phone_number", 1234567890], ["address", "123 Main St, City"], ["created_at", "2023-07-31 08:03:00.359307"], ["updated_at", "2023-07-31 08:03:00.359307"], ["admin_tag", 0]]
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jane_smith"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "phone_number", "address", "created_at", "updated_at", "admin_tag") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "jane_smith"], ["password_digest", "[FILTERED]"], ["email", "jane.smith@example.com"], ["phone_number", 9876543210], ["address", "456 Elm St, Town"], ["created_at", "2023-07-31 08:03:00.608961"], ["updated_at", "2023-07-31 08:03:00.608961"], ["admin_tag", 0]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin_user"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "phone_number", "address", "created_at", "updated_at", "admin_tag") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "admin_user"], ["password_digest", "[FILTERED]"], ["email", "admin@example.com"], ["phone_number", 5555555555], ["address", "789 Oak St, Village"], ["created_at", "2023-07-31 08:03:00.860376"], ["updated_at", "2023-07-31 08:03:00.860376"], ["admin_tag", 1]]
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParcel Create (0.2ms)[0m  [1m[32mINSERT INTO "parcels" ("weight", "password_digest", "present_location", "status", "user_id", "created_at", "updated_at", "destination") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["weight", 5], ["password_digest", "[FILTERED]"], ["present_location", "Warehouse A"], ["status", "In Transit"], ["user_id", 1], ["created_at", "2023-07-31 08:03:00.901910"], ["updated_at", "2023-07-31 08:03:00.901910"], ["destination", "1234 Street Rd, City"]]
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mParcel Create (0.2ms)[0m  [1m[32mINSERT INTO "parcels" ("weight", "password_digest", "present_location", "status", "user_id", "created_at", "updated_at", "destination") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["weight", 10], ["password_digest", "[FILTERED]"], ["present_location", "Warehouse B"], ["status", "Out for Delivery"], ["user_id", 2], ["created_at", "2023-07-31 08:03:00.919477"], ["updated_at", "2023-07-31 08:03:00.919477"], ["destination", "5678 Avenue St, Town"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParcel Create (0.3ms)[0m  [1m[32mINSERT INTO "parcels" ("weight", "password_digest", "present_location", "status", "user_id", "created_at", "updated_at", "destination") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["weight", 15], ["password_digest", "[FILTERED]"], ["present_location", "Warehouse C"], ["status", "Delivered"], ["user_id", 1], ["created_at", "2023-07-31 08:03:00.934176"], ["updated_at", "2023-07-31 08:03:00.934176"], ["destination", "9876 Road Ave, Village"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/parcels/" for 127.0.0.1 at 2023-07-31 11:06:04 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#index as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "parcels" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:8:in `index'
+  [1m[36mParcel Load (0.1ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:9:in `index'
+Completed 200 OK in 60ms (Views: 34.9ms | ActiveRecord: 1.1ms | Allocations: 40128)
+
+
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:06:34 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 5614)
+
+
+  
+NameError (undefined local variable or method `admin' for #<ParcelsController:0x00000000004088>):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:07:05 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.6ms | Allocations: 6446)
+
+
+  
+NameError (undefined local variable or method `admin_tag' for #<ParcelsController:0x00000000004c68>):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:08:03 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.3ms | Allocations: 7900)
+
+
+  
+NoMethodError (undefined method `admin_tag' for User:Class):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:09:00 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.6ms | Allocations: 7866)
+
+
+  
+NoMethodError (undefined method `admin_tag' for User:Class):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:13:40 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.1ms | Allocations: 7859)
+
+
+  
+NoMethodError (undefined method `admin_tag?' for User:Class):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:24:12 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms | Allocations: 3860)
+
+
+  
+NoMethodError (undefined method `admin_tag?' for User:Class):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:32:44 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms | Allocations: 4666)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<ParcelsController:0x00000000007940>):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:35:18 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms | Allocations: 4767)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<ParcelsController:0x00000000008430>):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:36:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.1ms | Allocations: 41230)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<ParcelsController:0x00000000003fc0>):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:38:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:54:in `find_parcel'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 1.2ms | Allocations: 41271)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<ParcelsController:0x00000000003fc0>):
+  
+app/controllers/parcels_controller.rb:77:in `current_user_is_an_admin?'
+app/controllers/parcels_controller.rb:58:in `parcel_params'
+app/controllers/parcels_controller.rb:24:in `update'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:47:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_user'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.4ms | Allocations: 21793)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/application_controller.rb:12:in `authenticate_user'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:53:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.4ms | Allocations: 324)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.5) lib/action_controller/metal/request_forgery_protection.rb:253:in `handle_unverified_request'
+actionpack (7.0.5) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+devise (4.9.2) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.0.5) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.5) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.5) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.5) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.5) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.5) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.5) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.5) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.5) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 11:55:27 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+Can't verify CSRF token authenticity.
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:50:in `find_parcel'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:23:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:23:in `update'
+  [1m[36mParcel Update (0.4ms)[0m  [1m[33mUPDATE "parcels" SET "updated_at" = ?, "destination" = ? WHERE "parcels"."id" = ?[0m  [["updated_at", "2023-07-31 08:55:28.353621"], ["destination", "Nairobi Ngong road"], ["id", 1]]
+  ↳ app/controllers/parcels_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:23:in `update'
+Completed 200 OK in 183ms (Views: 0.8ms | ActiveRecord: 16.1ms | Allocations: 45320)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-07-31 11:56:16 +0300
+Processing by ParcelsController#index as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+  [1m[36mParcel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "parcels" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:7:in `index'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 2689)
+
+
+Started GET "/parcels/1" for 127.0.0.1 at 2023-07-31 11:56:20 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+No template found for ParcelsController#show, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 893)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecievers (20230731092221)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "recievers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731092221"]]
+  [1m[36mTRANSACTION (27.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/parcels" for 127.0.0.1 at 2023-07-31 12:44:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#index as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+  [1m[36mParcel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "parcels" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:7:in `index'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 23.0ms | ActiveRecord: 1.4ms | Allocations: 19723)
+
+
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 12:48:18 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"destination"=>"Nairobi Ngong road", "id"=>"1", "parcel"=>{"destination"=>"Nairobi Ngong road"}}
+Can't verify CSRF token authenticity.
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:63:in `find_parcel'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+Completed 200 OK in 49ms (Views: 0.6ms | ActiveRecord: 2.8ms | Allocations: 28397)
+
+
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 12:49:38 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"status"=>"IN TRANSIT", "present_location"=>"JKIA", "id"=>"1", "parcel"=>{"present_location"=>"JKIA", "status"=>"IN TRANSIT"}}
+Can't verify CSRF token authenticity.
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:63:in `find_parcel'
+[31mUnpermitted parameters: :present_location, :status. Context: { controller: ParcelsController, action: update, request: #<ActionDispatch::Request:0x00007f82f4962e30>, params: {"status"=>"IN TRANSIT", "present_location"=>"JKIA", "controller"=>"parcels", "action"=>"update", "id"=>"1", "parcel"=>{"present_location"=>"JKIA", "status"=>"IN TRANSIT"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 3032)
+
+
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 12:50:03 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"status"=>"ONBOARD", "present_location"=>"JKIA", "id"=>"1", "parcel"=>{"present_location"=>"JKIA", "status"=>"ONBOARD"}}
+Can't verify CSRF token authenticity.
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:63:in `find_parcel'
+[31mUnpermitted parameters: :present_location, :status. Context: { controller: ParcelsController, action: update, request: #<ActionDispatch::Request:0x00007f82f8004d08>, params: {"status"=>"ONBOARD", "present_location"=>"JKIA", "controller"=>"parcels", "action"=>"update", "id"=>"1", "parcel"=>{"present_location"=>"JKIA", "status"=>"ONBOARD"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 2928)
+
+
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 12:55:56 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"status"=>"ONBOARD", "present_location"=>"JKIA", "id"=>"1", "parcel"=>{"present_location"=>"JKIA", "status"=>"ONBOARD"}}
+Can't verify CSRF token authenticity.
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:63:in `find_parcel'
+[31mUnpermitted parameters: :present_location, :status. Context: { controller: ParcelsController, action: update, request: #<ActionDispatch::Request:0x00007f82f00afc88>, params: {"status"=>"ONBOARD", "present_location"=>"JKIA", "controller"=>"parcels", "action"=>"update", "id"=>"1", "parcel"=>{"present_location"=>"JKIA", "status"=>"ONBOARD"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 10059)
+
+
+Started PATCH "/parcels/1" for 127.0.0.1 at 2023-07-31 12:55:58 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"status"=>"ONBOARD", "present_location"=>"JKIA", "id"=>"1", "parcel"=>{"present_location"=>"JKIA", "status"=>"ONBOARD"}}
+Can't verify CSRF token authenticity.
+  [1m[36mParcel Load (0.1ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:63:in `find_parcel'
+[31mUnpermitted parameters: :present_location, :status. Context: { controller: ParcelsController, action: update, request: #<ActionDispatch::Request:0x00007f82f4a16bd8>, params: {"status"=>"ONBOARD", "present_location"=>"JKIA", "controller"=>"parcels", "action"=>"update", "id"=>"1", "parcel"=>{"present_location"=>"JKIA", "status"=>"ONBOARD"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:27:in `update'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 2997)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:04:15 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.7ms | Allocations: 843)
+Completed 200 OK in 25ms (Views: 9.3ms | Allocations: 7230)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:04:15 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.2ms | Allocations: 486)
+Completed 200 OK in 7ms (Views: 6.3ms | Allocations: 1521)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:04:22 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 275)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:04:33 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 253)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:04:37 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 253)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:05:04 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 253)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:05:51 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 3ms (Views: 2.3ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:05:51 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:05:53 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:05:57 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:06:08 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:06:25 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:07:03 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:07:11 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:07:13 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:07:23 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 3ms (Views: 1.5ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:07:23 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:08:05 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:08:06 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:08:06 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 2ms (Views: 0.9ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:08:06 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:15:27 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 7ms (Views: 0.9ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:15:28 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 15)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:18:22 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:18:25 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:18:25 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:18:29 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:18:31 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 251)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 14:18:31 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 251)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:20:16 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController
+Did you mean?  UserController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:20:26 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController
+Did you mean?  UserController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:22:43 +0300
+  
+ArgumentError (Before process_action callback :authourized has not been defined):
+  
+app/controllers/user_controller.rb:3:in `<class:UserController>'
+app/controllers/user_controller.rb:1:in `<top (required)>'
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:23:28 +0300
+  
+ArgumentError (Before process_action callback :authourized has not been defined):
+  
+app/controllers/user_controller.rb:3:in `<class:UserController>'
+app/controllers/user_controller.rb:1:in `<top (required)>'
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:24:17 +0300
+  
+ArgumentError (Before process_action callback :authenticate_user has not been defined):
+  
+app/controllers/user_controller.rb:3:in `<class:UserController>'
+app/controllers/user_controller.rb:1:in `<top (required)>'
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:25:01 +0300
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 5728)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-07-31 14:28:05 +0300
+Processing by UserController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:13:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "phone_number", "address", "created_at", "updated_at", "admin_tag") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Martin"], ["password_digest", "[FILTERED]"], ["email", "joe@email.com"], ["phone_number", nil], ["address", nil], ["created_at", "2023-07-31 11:28:06.020354"], ["updated_at", "2023-07-31 11:28:06.020354"], ["admin_tag", nil]]
+  ↳ app/controllers/user_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "Martin"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:14:in `create'
+Completed 201 Created in 282ms (Views: 0.5ms | ActiveRecord: 13.7ms | Allocations: 9504)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:28:45 +0300
+Processing by UserController#show as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1081)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:28:49 +0300
+Processing by UserController#show as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:30:51 +0300
+Processing by UserController#show as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 1.4ms | Allocations: 6210)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:32:14 +0300
+Processing by UserController#show as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 6285)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:32:37 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 3412)
+
+
+  
+NoMethodError (undefined method `authenticate_user' for #<User id: 4, username: "Martin", password_digest: [FILTERED], email: "joe@email.com", phone_number: nil, address: nil, created_at: "2023-07-31 11:28:06.020354000 +0000", updated_at: "2023-07-31 11:28:06.020354000 +0000", admin_tag: nil>
+Did you mean?  authenticate):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:33:15 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 269ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 6091)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:33:38 +0300
+Processing by UserController#show as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 2.1ms | Allocations: 1332)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:34:35 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"joe@email.com"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 249ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 728)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:34:49 +0300
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 820)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:35:04 +0300
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 814)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 14:35:05 +0300
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 824)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:38:33 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 263ms (Views: 1.0ms | ActiveRecord: 1.2ms | Allocations: 6088)
+
+
+Started POST "/me" for 127.0.0.1 at 2023-07-31 14:39:25 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/me"):
+  
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:39:43 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+
+
+
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 14ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 6223)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:41:40 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+
+
+
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 17ms (Views: 0.8ms | ActiveRecord: 1.5ms | Allocations: 6238)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:43:53 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 253ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 6092)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:45:01 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"john_doe", "password"=>"[FILTERED]", "session"=>{"username"=>"john_doe", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "john_doe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 246ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 722)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:45:32 +0300
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 1325)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:46:00 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 401 Unauthorized in 251ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 618)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:46:23 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 251ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 707)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:46:38 +0300
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:53:36 +0300
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 0.7ms | Allocations: 5734)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:53:42 +0300
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 865)
+
+
+Started GET "/log" for 127.0.0.1 at 2023-07-31 14:53:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/log"):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:54:36 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 251ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1203)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:54:48 +0300
+Processing by UserController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 862)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:58:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserController#show as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 403)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:58:12 +0300
+Processing by UserController#show as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 107)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 14:58:26 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 384ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 22924)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 14:58:40 +0300
+Processing by UserController#show as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 108)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 15:00:58 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.4ms | Allocations: 8378)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SessionsController:0x00000000005dc0>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 15:01:34 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 2997)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SessionsController:0x00000000005e60>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 15:06:16 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 2995)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SessionsController:0x00000000005f00>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 15:06:31 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 2985)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SessionsController:0x00000000005fa0>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 15:07:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 107242ms (ActiveRecord: 2.8ms | Allocations: 121675)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 15:10:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 57629ms (Views: 4.2ms | ActiveRecord: 0.8ms | Allocations: 112049)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 15:11:37 +0300
+Processing by UserController#show as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 273)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 15:25:57 +0300
+Processing by UserController#show as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 246)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 15:27:04 +0300
+  
+SyntaxError (/home/joe/Moringa/code/phase4/sendit/server/app/controllers/user_controller.rb:3: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/user_controller.rb:3: syntax error, unexpected '\n', expecting =>
+app/controllers/user_controller.rb:3: syntax error, unexpected '\n', expecting =>
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 15:27:26 +0300
+Processing by UserController#show as */*
+Completed 404 Not Found in 7ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 3227)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 15:28:12 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Martin", "password"=>"[FILTERED]", "session"=>{"username"=>"Martin", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Martin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 201 Created in 261ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 4210)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 15:28:26 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+
+
+Processing by UserController#show as */*
+Completed 404 Not Found in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 15:28:54 +0300
+Processing by UserController#show as */*
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 127)
+
+
+Started GET "/auth/4" for 127.0.0.1 at 2023-07-31 15:30:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/4"):
+  
+Started GET "/4" for 127.0.0.1 at 2023-07-31 15:30:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/4"):
+  
+Started GET "/auth/4" for 127.0.0.1 at 2023-07-31 15:30:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/4"):
+  
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 15:31:46 +0300
+Processing by UserController#show as */*
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 123)
+
+
+Started GET "/auth" for 127.0.0.1 at 2023-07-31 15:34:37 +0300
+Processing by UserController#show as */*
+Completed 404 Not Found in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 2605)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToParcel (20230731125926)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToParcel (20230731125926)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Type_of_shipment" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Carrier" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Package" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Pick_up_date" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Departure_date" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731125926"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToParcel (20230731125926)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL, "Pick_up_date" varchar DEFAULT NULL, "Departure_date" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date","Departure_date")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date","Departure_date" FROM "parcels"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL, "Pick_up_date" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL, "Pick_up_date" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date" FROM "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package" FROM "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package" FROM "parcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier" FROM "parcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment" FROM "aparcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment" FROM "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230731125926"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToParcel (20230731125926)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Type_of_shipment" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Carrier" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Package" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Pick_up_date" datetime(6)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Departure_date" datetime(6)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731125926"]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToParcel (20230731125926)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL, "Pick_up_date" datetime(6) DEFAULT NULL, "Departure_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date","Departure_date")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date","Departure_date" FROM "parcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL, "Pick_up_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date" FROM "aparcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL, "Pick_up_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date" FROM "parcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package" FROM "parcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier" FROM "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment" FROM "aparcels"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment" FROM "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230731125926"]]
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToParcel (20230731125926)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Type_of_shipment" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Carrier" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Package" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Pick_up_date" datetime(6)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Departure_date" datetime(6)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731125926"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started PATCH "/parcels" for 127.0.0.1 at 2023-07-31 22:46:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [PATCH] "/parcels"):
+  
+Started PATCH "/parcels" for 127.0.0.1 at 2023-07-31 22:46:43 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/parcels"):
+  
+Started POST "/parcels" for 127.0.0.1 at 2023-07-31 22:46:52 +0300
+Processing by ParcelsController#create as */*
+  Parameters: {"destination"=>"Windhoek 77 Indepence", "parcel"=>{"destination"=>"Windhoek 77 Indepence"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 380)
+
+
+Started POST "/parcels" for 127.0.0.1 at 2023-07-31 22:58:33 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#create as */*
+  Parameters: {"destination"=>"Windhoek 77 Indepence", "parcel"=>{"destination"=>"Windhoek 77 Indepence"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.8ms | Allocations: 2723)
+
+
+  
+NoMethodError (undefined method `authenticate_user' for #<ParcelsController:0x000000000049c0>
+Did you mean?  authenticate_with_http_digest):
+  
+activesupport (7.0.5) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.5) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.5) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.5) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.5) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.5) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.5) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.5) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/parcels" for 127.0.0.1 at 2023-07-31 23:00:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#create as */*
+  Parameters: {"destination"=>"Windhoek 77 Indepence", "parcel"=>{"destination"=>"Windhoek 77 Indepence"}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 2713)
+
+
+  
+NoMethodError (undefined method `authenticate_user' for #<ParcelsController:0x000000000049c0>
+Did you mean?  authenticate_with_http_digest):
+  
+activesupport (7.0.5) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.5) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.5) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.5) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.5) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.5) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.5) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.5) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.5) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/parcels" for 127.0.0.1 at 2023-07-31 23:16:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant ApplicationController::AuthenticationModule):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/parcels_controller.rb:1:in `<top (required)>'
+Started POST "/parcels" for 127.0.0.1 at 2023-07-31 23:26:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant ApplicationController::AuthenticationModule):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/parcels_controller.rb:1:in `<top (required)>'
+Started POST "/parcels" for 127.0.0.1 at 2023-07-31 23:48:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#create as */*
+  Parameters: {"destination"=>"Windhoek 77 Indepence", "parcel"=>{"destination"=>"Windhoek 77 Indepence"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 406)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToParcel (20230731125926)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL, "Pick_up_date" datetime(6) DEFAULT NULL, "Departure_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date","Departure_date")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date","Departure_date" FROM "parcels"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL, "Pick_up_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL, "Pick_up_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package","Pick_up_date" FROM "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL, "Package" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier","Package" FROM "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier" FROM "aparcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL, "Carrier" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment","Carrier" FROM "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL, "Type_of_shipment" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination","Type_of_shipment" FROM "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "weight" integer DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "present_location" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "parcels" ("id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination")
+                     SELECT "id","weight","password_digest","present_location","status","user_id","created_at","updated_at","destination" FROM "aparcels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230731125926"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToParcel (20230731125926)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Type_of_shipment" varchar[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Carrier" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "parcels" ADD "journey_duration" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Package" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "parcels" ADD "travel_distance" integer[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Pick_up_date" datetime(6)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "parcels" ADD "Departure_date" datetime(6)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731125926"]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMails (20230731211254)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "mails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "receiver_id" integer, "content" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731211254"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddReceiverIdToParcel (20230731214827)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "parcels" ADD "receiver_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230731214827"]]
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "mails"[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "mails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "receiver_id" integer, "content" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "parcels"[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "weight" integer, "password_digest" varchar, "present_location" varchar, "status" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar, "Type_of_shipment" varchar, "Carrier" varchar, "journey_duration" varchar, "Package" integer, "travel_distance" integer, "Pick_up_date" datetime(6), "Departure_date" datetime(6), "receiver_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "recievers"[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "recievers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin_tag" boolean)[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230731214827)[0m
+  [1m[35m (12.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230728072803),
+(20230728074123),
+(20230728075016),
+(20230728080825),
+(20230731075114),
+(20230731080015),
+(20230731092221),
+(20230731125926),
+(20230731211254);
+
+[0m
+  [1m[35m (71.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-07-31 21:51:44.647347"], ["updated_at", "2023-07-31 21:51:44.647347"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7dc32e1541cae2ce0ad5f294de15815e777e7f9f"], ["created_at", "2023-07-31 21:51:44.666318"], ["updated_at", "2023-07-31 21:51:44.666318"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mails"[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "mails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "receiver_id" integer, "content" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "parcels"[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "weight" integer, "password_digest" varchar, "present_location" varchar, "status" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar, "Type_of_shipment" varchar, "Carrier" varchar, "journey_duration" varchar, "Package" integer, "travel_distance" integer, "Pick_up_date" datetime(6), "Departure_date" datetime(6), "receiver_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "recievers"[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "recievers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin_tag" boolean)[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230731214827)[0m
+  [1m[35m (7.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230728072803),
+(20230728074123),
+(20230728075016),
+(20230728080825),
+(20230731075114),
+(20230731080015),
+(20230731092221),
+(20230731125926),
+(20230731211254);
+
+[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-07-31 21:51:44.812003"], ["updated_at", "2023-07-31 21:51:44.812003"]]
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2023-07-31 21:51:44.831686"], ["key", "environment"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7dc32e1541cae2ce0ad5f294de15815e777e7f9f"], ["created_at", "2023-07-31 21:51:44.858377"], ["updated_at", "2023-07-31 21:51:44.858377"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMail Create (0.3ms)[0m  [1m[32mINSERT INTO "mails" ("user_id", "receiver_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["receiver_id", 2], ["content", "Hello, how are you doing?"], ["created_at", "2023-07-31 21:51:44.905289"], ["updated_at", "2023-07-31 21:51:44.905289"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMail Create (0.3ms)[0m  [1m[32mINSERT INTO "mails" ("user_id", "receiver_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["receiver_id", 1], ["content", "Thanks for the package!"], ["created_at", "2023-07-31 21:51:44.920541"], ["updated_at", "2023-07-31 21:51:44.920541"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "mails"[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "mails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "receiver_id" integer, "content" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "parcels"[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "weight" integer, "password_digest" varchar, "present_location" varchar, "status" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar, "Type_of_shipment" varchar, "Carrier" varchar, "journey_duration" varchar, "Package" integer, "travel_distance" integer, "Pick_up_date" datetime(6), "Departure_date" datetime(6), "receiver_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "recievers"[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "recievers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin_tag" boolean)[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (10.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230731214827)[0m
+  [1m[35m (7.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230728072803),
+(20230728074123),
+(20230728075016),
+(20230728080825),
+(20230731075114),
+(20230731080015),
+(20230731092221),
+(20230731125926),
+(20230731211254);
+
+[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (6.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-07-31 21:54:41.045794"], ["updated_at", "2023-07-31 21:54:41.045794"]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7dc32e1541cae2ce0ad5f294de15815e777e7f9f"], ["created_at", "2023-07-31 21:54:41.069089"], ["updated_at", "2023-07-31 21:54:41.069089"]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "mails"[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "mails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "receiver_id" integer, "content" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "parcels"[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "weight" integer, "password_digest" varchar, "present_location" varchar, "status" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "destination" varchar, "Type_of_shipment" varchar, "Carrier" varchar, "journey_duration" varchar, "Package" integer, "travel_distance" integer, "Pick_up_date" datetime(6), "Departure_date" datetime(6), "receiver_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "recievers"[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "recievers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "email" varchar, "phone_number" integer, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin_tag" boolean)[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (10.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230731214827)[0m
+  [1m[35m (10.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230728072803),
+(20230728074123),
+(20230728075016),
+(20230728080825),
+(20230731075114),
+(20230731080015),
+(20230731092221),
+(20230731125926),
+(20230731211254);
+
+[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-07-31 21:54:41.185114"], ["updated_at", "2023-07-31 21:54:41.185114"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2023-07-31 21:54:41.213666"], ["key", "environment"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7dc32e1541cae2ce0ad5f294de15815e777e7f9f"], ["created_at", "2023-07-31 21:54:41.231275"], ["updated_at", "2023-07-31 21:54:41.231275"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Alice"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "phone_number", "address", "created_at", "updated_at", "admin_tag") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Alice"], ["password_digest", "[FILTERED]"], ["email", "alice@example.com"], ["phone_number", 1112223333], ["address", "789 Oak Ave, City C"], ["created_at", "2023-07-31 21:54:41.504568"], ["updated_at", "2023-07-31 21:54:41.504568"], ["admin_tag", nil]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "AdminUser"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "phone_number", "address", "created_at", "updated_at", "admin_tag") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "AdminUser"], ["password_digest", "[FILTERED]"], ["email", "admin@example.com"], ["phone_number", 4445556666], ["address", "101 Admin St, City D"], ["created_at", "2023-07-31 21:54:41.753624"], ["updated_at", "2023-07-31 21:54:41.753624"], ["admin_tag", nil]]
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReciever Create (0.3ms)[0m  [1m[32mINSERT INTO "recievers" ("username", "email", "phone_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "John Doe"], ["email", "john@example.com"], ["phone_number", 1234567890], ["address", "123 Main St, City A"], ["created_at", "2023-07-31 21:54:41.778985"], ["updated_at", "2023-07-31 21:54:41.778985"]]
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReciever Create (0.3ms)[0m  [1m[32mINSERT INTO "recievers" ("username", "email", "phone_number", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Jane Smith"], ["email", "jane@example.com"], ["phone_number", 9876543210], ["address", "456 Elm St, City B"], ["created_at", "2023-07-31 21:54:41.791752"], ["updated_at", "2023-07-31 21:54:41.791752"]]
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMail Create (0.3ms)[0m  [1m[32mINSERT INTO "mails" ("user_id", "receiver_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["receiver_id", 2], ["content", "Hello, how are you doing?"], ["created_at", "2023-07-31 21:54:41.824888"], ["updated_at", "2023-07-31 21:54:41.824888"]]
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMail Create (0.2ms)[0m  [1m[32mINSERT INTO "mails" ("user_id", "receiver_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["receiver_id", 1], ["content", "Thanks for the package!"], ["created_at", "2023-07-31 21:54:41.837371"], ["updated_at", "2023-07-31 21:54:41.837371"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParcel Create (0.2ms)[0m  [1m[32mINSERT INTO "parcels" ("weight", "password_digest", "present_location", "status", "user_id", "created_at", "updated_at", "destination", "Type_of_shipment", "Carrier", "journey_duration", "Package", "travel_distance", "Pick_up_date", "Departure_date", "receiver_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["weight", 5], ["password_digest", "[FILTERED]"], ["present_location", "Warehouse A"], ["status", "In Transit"], ["user_id", 1], ["created_at", "2023-07-31 21:54:42.162046"], ["updated_at", "2023-07-31 21:54:42.162046"], ["destination", "Home Address"], ["Type_of_shipment", "Express"], ["Carrier", "Carrier X"], ["journey_duration", "2 days"], ["Package", 1], ["travel_distance", 150], ["Pick_up_date", "2023-07-31 21:54:41.849543"], ["Departure_date", "2023-08-02 21:54:41.849544"], ["receiver_id", 2]]
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mParcel Create (0.2ms)[0m  [1m[32mINSERT INTO "parcels" ("weight", "password_digest", "present_location", "status", "user_id", "created_at", "updated_at", "destination", "Type_of_shipment", "Carrier", "journey_duration", "Package", "travel_distance", "Pick_up_date", "Departure_date", "receiver_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["weight", 10], ["password_digest", "[FILTERED]"], ["present_location", "Courier Center B"], ["status", "Delivered"], ["user_id", 2], ["created_at", "2023-07-31 21:54:42.410322"], ["updated_at", "2023-07-31 21:54:42.410322"], ["destination", "Office Address"], ["Type_of_shipment", "Standard"], ["Carrier", "Carrier Y"], ["journey_duration", "5 days"], ["Package", 2], ["travel_distance", 300], ["Pick_up_date", "2023-07-28 21:54:41.849637"], ["Departure_date", "2023-07-30 21:54:41.849675"], ["receiver_id", 1]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m

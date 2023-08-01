@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_28_080825) do
-  create_table "admins", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
+ActiveRecord::Schema[7.0].define(version: 2023_07_31_214827) do
+  create_table "mails", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "receiver_id"
+    t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +28,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_28_080825) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "destination"
+    t.string "Type_of_shipment"
+    t.string "Carrier"
+    t.string "journey_duration"
+    t.integer "Package"
+    t.integer "travel_distance"
+    t.datetime "Pick_up_date"
+    t.datetime "Departure_date"
+    t.integer "receiver_id"
+  end
+
+  create_table "recievers", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.integer "phone_number"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,6 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_28_080825) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin_tag"
   end
 
 end
