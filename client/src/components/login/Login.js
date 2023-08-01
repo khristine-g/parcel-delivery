@@ -32,9 +32,9 @@ const LoginPage = () => {
     });
   };
 
-  if (isLoggedIn) {
-    return <Redirect exact to="/dashboard" />;
-  }
+  // if (isLoggedIn) {
+  //   return <Redirect exact to="/dashboard" />;
+  // }
 
   return (
     <main id="login-page">

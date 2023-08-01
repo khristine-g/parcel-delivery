@@ -40,9 +40,9 @@ const SignupPage = () => {
     }
   };
 
-  if (isSignedUp) {
-    return <Redirect exact to="/" />;
-  }
+  // if (isSignedUp) {
+  //   return <Redirect exact to="/" />;
+  // }
 
   return (
     <main id="signup-page">

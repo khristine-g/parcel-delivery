@@ -14,7 +14,7 @@ import SignupPage from "./components/signup/Signup";
 
 import LoginPage from "./components/login/Login";
 
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
       
         <Navbar />
         
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/parcel" element={<Parcel />} />
           <Route path="/about" element={<About />} />
@@ -31,21 +32,16 @@ function App() {
           <Route path="/get-quote" element={<Quote />} />
           <Route path="/create-shipment" element={<Parcel />} />
           <Route path="/track-shipment" element={<ShipmentTracking />} />
-          <Route exact path="/">
-        <Footer />
-      </Route>
-      <Route exact path="/">
-        <LoginPage />
-      </Route>
-      <Route path="/register">
-        <SignupPage />
-      </Route>
-        
+          
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<SignupPage />} />
+      </Routes>
         <Shipping/>
         <Advantages />
         <Services />
         <Tracking />
         <About />
+        <Footer />
       
 
     </div>
