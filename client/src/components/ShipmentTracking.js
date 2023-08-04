@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ShipmentTracking = () => {
-  const [trackingNumber, setTrackingNumber] = useState('');
+  const [trackingNumber, setTrackingNumber] = useState("");
   const [shipmentData, setShipmentData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [newDestination, setNewDestination] = useState('');
+  const [newDestination, setNewDestination] = useState("");
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -15,13 +15,13 @@ const ShipmentTracking = () => {
     try {
       const response = await fetch(`/api/v1/shipments/${trackingNumber}`);
       if (!response.ok) {
-        throw new Error('Shipment not found');
+        throw new Error("Shipment not found");
       }
       const data = await response.json();
       setShipmentData(data);
     } catch (error) {
       console.error(error);
-      setError('Shipment not found');
+      setError("Shipment not found");
       setShipmentData(null);
     } finally {
       setIsLoading(false);
@@ -31,24 +31,27 @@ const ShipmentTracking = () => {
   const handleCancelParcel = async () => {
     try {
       // Make the API request to cancel the parcel
-      const response = await fetch(`/api/v1/shipments/${trackingNumber}/cancel`, {
-        method: 'POST', // Use the appropriate HTTP method (POST, PUT, DELETE, etc.)
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        // Optionally, you can send data in the request body (if required by your API)
-        // body: JSON.stringify({}),
-      });
+      const response = await fetch(
+        `/api/v1/shipments/${trackingNumber}/cancel`,
+        {
+          method: "POST", // Use the appropriate HTTP method (POST, PUT, DELETE, etc.)
+          headers: {
+            "Content-Type": "application/json",
+          },
+          // Optionally, you can send data in the request body (if required by your API)
+          // body: JSON.stringify({}),
+        }
+      );
 
       if (!response.ok) {
-        throw new Error('Failed to cancel the parcel');
+        throw new Error("Failed to cancel the parcel");
       }
 
       // Handle the successful response (if needed)
-      console.log('Parcel cancelled successfully');
+      console.log("Parcel cancelled successfully");
     } catch (error) {
       console.error(error);
-      setError('Failed to cancel the parcel');
+      setError("Failed to cancel the parcel");
     }
   };
 
@@ -59,36 +62,62 @@ const ShipmentTracking = () => {
   const handleChangeDestination = async () => {
     try {
       // Make the API request to change the destination of the parcel
-      const response = await fetch(`/api/v1/shipments/${trackingNumber}/change-destination`, {
-        method: 'POST', // Use the appropriate HTTP method (POST, PUT, DELETE, etc.)
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          destination: newDestination,
-        }),
-      });
+      const response = await fetch(
+        `/api/v1/shipments/${trackingNumber}/change-destination`,
+        {
+          method: "POST", // Use the appropriate HTTP method (POST, PUT, DELETE, etc.)
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            destination: newDestination,
+          }),
+        }
+      );
 
       if (!response.ok) {
-        throw new Error('Failed to change the destination');
+        throw new Error("Failed to change the destination");
       }
 
       // Handle the successful response (if needed)
-      console.log('Destination changed successfully:', newDestination);
+      console.log("Destination changed successfully:", newDestination);
     } catch (error) {
       console.error(error);
-      setError('Failed to change the destination');
+      setError("Failed to change the destination");
     }
   };
 
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
-        <input type="text" value={trackingNumber} onChange={(e) => setTrackingNumber(e.target.value)} />
+        <input
+          type="text"
+          value={trackingNumber}
+          onChange={(e) => setTrackingNumber(e.target.value)}
+        />
         <button type="submit">Track Shipment</button>
       </form>
       {isLoading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
+      {!error ? (
+        <p>{error}</p>
+      ) : (
+        <section id="receipt-section">
+          <div id="receipt">
+            <div className="receipt-row">
+              <div>Origin</div>
+              <div>Package</div>
+              <div>Status</div>
+              <div>Type of shipment</div>
+            </div>
+            <div className="receipt-row">
+              <div>Weight</div>
+              <div>Carrier ref No</div>
+              <div>departure time</div>
+              <div>Arrival time</div>
+            </div>
+          </div>
+        </section>
+      )}
       {shipmentData && (
         <div>
           <p>Status: {shipmentData.status}</p>
@@ -97,13 +126,19 @@ const ShipmentTracking = () => {
           <button onClick={handleCancelParcel}>Cancel Parcel</button>
           <div>
             <label htmlFor="destination">Change Destination:</label>
-            <select id="destination" value={newDestination} onChange={handleDestinationChange}>
+            <select
+              id="destination"
+              value={newDestination}
+              onChange={handleDestinationChange}
+            >
               <option value="destination1">Destination 1</option>
               <option value="destination2">Destination 2</option>
               <option value="destination3">Destination 3</option>
               {/* Add more destination options as needed */}
             </select>
-            <button onClick={handleChangeDestination}>Change Destination</button>
+            <button onClick={handleChangeDestination}>
+              Change Destination
+            </button>
           </div>
         </div>
       )}
@@ -112,7 +147,6 @@ const ShipmentTracking = () => {
 };
 
 export default ShipmentTracking;
-
 
 // import React, { useState } from 'react';
 
