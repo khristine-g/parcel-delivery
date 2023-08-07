@@ -1,48 +1,48 @@
 import "./Signup.css";
 import React, { useState } from "react";
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const SignupPage = () => {
   const [isSignedUp, setSignedUp] = useState(false);
-
   const [isLoading, setIsLoading] = useState(false);
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
 
-  const handleSignup = () => {
-    let userObj = { name, email, password };
+  const navigate = useNavigate(); // Initialize the useNavigate hook
 
-    console.log(userObj);
+  const handleSignup = () => {
+    let userObj = { name, email, password, password_confirmation: passwordConfirm };
+
     if (passwordConfirm === password) {
       setIsLoading(true);
-      fetch({
+      fetch("http://localhost:3000/api/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userObj),
-      }).then((response) => {
-        if (response.ok) {
-          setIsLoading(false);
-          setSignedUp(true);
-          alert("Signup successful");
-        } else {
-          setIsLoading(false);
-          return response.json().then((error) => {
-            let errorMessage = error.error;
-            alert(errorMessage);
-          });
-        }
-      });
+      })
+        .then((response) => {
+          if (response.ok) {
+            setIsLoading(false);
+            setSignedUp(true);
+            alert("Signup successful");
+            navigate("/"); // Navigate to home after successful signup
+          } else {
+            setIsLoading(false);
+            return response.json().then((error) => {
+              let errorMessage = error.error || "Something went wrong";
+              alert(errorMessage);
+            });
+          }
+        })
+        .catch((error) => {
+          console.error("Error sending signup data:", error);
+        });
     } else {
       alert("Password must match");
     }
   };
-
-  // if (isSignedUp) {
-  //   return <Redirect exact to="/" />;
-  // }
 
   return (
     <main id="signup-page">
@@ -59,9 +59,7 @@ const SignupPage = () => {
           <input
             type="email"
             value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
@@ -70,9 +68,7 @@ const SignupPage = () => {
           <input
             type="text"
             value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
+            onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
@@ -81,9 +77,7 @@ const SignupPage = () => {
           <input
             type="password"
             value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
@@ -92,14 +86,12 @@ const SignupPage = () => {
           <input
             type="password"
             value={passwordConfirm}
-            onChange={(e) => {
-              setPasswordConfirm(e.target.value);
-            }}
+            onChange={(e) => setPasswordConfirm(e.target.value)}
             required
           />
         </div>
         <button type="submit" className="form-btn">
-          Login
+          signup
           {isLoading && (
             <div className="loader-cont">
               <div className="loader-ball"></div>

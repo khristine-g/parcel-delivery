@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../Navbar.css'
 
 const Navbar = () => {
+  
   return (
     
         <nav className="navbar-container">
@@ -12,16 +13,24 @@ const Navbar = () => {
             </li>
             
             <li>
-              <Link to="/parcel">Create parcel</Link>
+              <Link to="/Login">Login</Link>
             </li> 
             <li>
-              <Link to="/about">About </Link>
-              <li>
-              <Link to="/tracking">Track </Link>
+              <Link to="/register">Register </Link>
+               
+           
             </li> 
+
             <li>
-              <Link to="/services">Services</Link>
+              <Link to="/my-shipments">my shipments </Link>
+               
+           
             </li> 
+
+            <li>
+              <Link to="/admin">Admin </Link>
+               
+           
             </li> 
           </ul> 
         </nav>

@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
-  resources :parcels
-  resources :recievers, only: [:create]
-  post "/signup", to: "user#create"
-  post "/login", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy"
+  resources :users, only: [:show, :create]
+  resources :parcels, only: [:create, :update, :index, :show] do
+    member do
+      put 'update_destination'
+    end
+    collection do
+      get 'admin_dashboard' # Add the admin dashboard action to the collection
+    end
+  end
 
-  # get "/auth", to: "user#show"
+  resources :receivers, only: [:create]
+
+  namespace :api do
+    post '/signup', to: 'users#create'
+    post '/login', to: 'auth#login'
+  end
+  put '/parcels/admin_dashboard/:id', to: 'parcels#update_admin_dashboard'
 end
+

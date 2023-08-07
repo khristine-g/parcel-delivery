@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_31_214827) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_07_082202) do
   create_table "mails", force: :cascade do |t|
     t.integer "user_id"
     t.integer "receiver_id"
@@ -20,22 +20,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_31_214827) do
   end
 
   create_table "parcels", force: :cascade do |t|
-    t.integer "weight"
-    t.string "password_digest"
-    t.string "present_location"
-    t.string "status"
-    t.integer "user_id"
+    t.string "sender_name"
+    t.string "sender_email"
+    t.string "sender_address"
+    t.string "receiver_name"
+    t.string "receiver_email"
+    t.string "receiver_address"
+    t.string "receiver_country"
+    t.string "weight"
+    t.string "type_of_shipment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "destination"
-    t.string "Type_of_shipment"
-    t.string "Carrier"
-    t.string "journey_duration"
-    t.integer "Package"
-    t.integer "travel_distance"
-    t.datetime "Pick_up_date"
-    t.datetime "Departure_date"
-    t.integer "receiver_id"
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_parcels_on_user_id"
   end
 
   create_table "recievers", force: :cascade do |t|
@@ -48,14 +45,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_31_214827) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.string "email"
-    t.integer "phone_number"
-    t.string "address"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "admin_tag"
   end
 
+  add_foreign_key "parcels", "users"
 end

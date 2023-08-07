@@ -15,11 +15,11 @@ function Home() {
       {/* Wrapper for slides */}
       <div className="carousel-inner">
         <div className="item active">
-          <img src=" https://seriumglobal.com/wp-content/uploads/2019/10/Rail-freight.jpg" alt="Chania" />
-          {/* <img src=" https://www.morethanshipping.com/wp-content/uploads/2019/12/overview-of-railroads.jpg" alt=" A train"/> */}
+          <img src=" https://corlettexpress.com/storage/2019/12/What-are-the-advantages-of-road-transport-2048x1024.webp" alt="Chania" />
+          
           <div className="carousel-caption">
             <h3>Train Transportation</h3>
-            <p> TransLogic offers a menu of supply chain solutions that can optimize the effectiveness of your product<br></br> promotion and reduce the cost of packaging</p>
+            {/* <p> TransLogic offers a menu of supply chain solutions that can optimize the effectiveness of your product<br></br> promotion and reduce the cost of packaging</p> */}
           </div>
         </div>
 
