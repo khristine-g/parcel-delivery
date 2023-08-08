@@ -20,7 +20,7 @@ const Quote = () => {
 
   return (
     <div className="quote-container">
-      <h1>Calculate the Cost of Sending Your Parcel</h1>
+      <h6>Calculate the Cost of Sending Your Parcel</h6>
       <button onClick={toggleForm}>Get Quote</button>
       {showForm && (
         <form onSubmit={handleSubmit}>
@@ -33,7 +33,7 @@ const Quote = () => {
               required
             />
           </label>
-          <button type="submit">Calculate</button>
+          <button type="submit">Calculate </button>
         </form>
       )}
       {cost && <div className="cost-result">The cost to send your parcel is ${cost}</div>}

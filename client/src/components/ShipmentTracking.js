@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React, { useState } from 'react';
+import '../ShipmentTracking.css';
+>>>>>>> ea4b4f6d2762ad2cfcc9d785463b0602975e9509
 
 const ShipmentTracking = () => {
   const [trackingNumber, setTrackingNumber] = useState("");
@@ -29,6 +34,7 @@ const ShipmentTracking = () => {
   };
 
   const handleCancelParcel = async () => {
+<<<<<<< HEAD
     try {
       // Make the API request to cancel the parcel
       const response = await fetch(
@@ -53,6 +59,9 @@ const ShipmentTracking = () => {
       console.error(error);
       setError("Failed to cancel the parcel");
     }
+=======
+    // ... Remaining code for handleCancelParcel function
+>>>>>>> ea4b4f6d2762ad2cfcc9d785463b0602975e9509
   };
 
   const handleDestinationChange = (e) => {
@@ -60,6 +69,7 @@ const ShipmentTracking = () => {
   };
 
   const handleChangeDestination = async () => {
+<<<<<<< HEAD
     try {
       // Make the API request to change the destination of the parcel
       const response = await fetch(
@@ -90,12 +100,29 @@ const ShipmentTracking = () => {
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
+=======
+    // ... Remaining code for handleChangeDestination function
+  };
+
+  return (
+    <div className="search-bar-container">
+      <form onSubmit={handleFormSubmit} className="search-form">
+>>>>>>> ea4b4f6d2762ad2cfcc9d785463b0602975e9509
         <input
           type="text"
           value={trackingNumber}
           onChange={(e) => setTrackingNumber(e.target.value)}
+<<<<<<< HEAD
         />
         <button type="submit">Track Shipment</button>
+=======
+          placeholder="Enter tracking number"
+          className="search-input"
+        />
+        <button type="submit" className="search-button">
+          Track Shipment
+        </button>
+>>>>>>> ea4b4f6d2762ad2cfcc9d785463b0602975e9509
       </form>
       {isLoading && <p>Loading...</p>}
       {!error ? (
@@ -120,6 +147,7 @@ const ShipmentTracking = () => {
       )}
       {shipmentData && (
         <div>
+<<<<<<< HEAD
           <p>Status: {shipmentData.status}</p>
           <p>Delivery Date: {shipmentData.delivery_date}</p>
           {/* Display other shipment details as needed */}
@@ -140,6 +168,9 @@ const ShipmentTracking = () => {
               Change Destination
             </button>
           </div>
+=======
+          {/* ... Remaining code for displaying shipment data */}
+>>>>>>> ea4b4f6d2762ad2cfcc9d785463b0602975e9509
         </div>
       )}
     </div>

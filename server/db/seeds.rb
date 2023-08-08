@@ -9,5 +9,17 @@
 
 # Sample user data
 
+# Create an admin user
+User.create!(
+  name: 'Esther King', # Add the name of the admin user
+  email: 'esther@gmail.com',
+  password: 'esther12345', # You can replace 'password' with the desired password for the admin user
+  password_confirmation: 'esther12345', # Add the password confirmation
+  role: :admin
+)
+
+
+
+
 
 

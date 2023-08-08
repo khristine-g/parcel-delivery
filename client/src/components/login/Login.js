@@ -1,6 +1,6 @@
 import "./Login.css";
 import React, { useState } from "react";
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom"; // Include useNavigate
 
 const LoginPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -9,32 +9,48 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+
   const handleLogin = () => {
     setIsLoading(true);
-
+  
     let userObj = { email, password };
-
-    fetch({
+  
+    fetch("http://localhost:3000/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userObj),
-    }).then((response) => {
-      if (response.ok) {
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          setIsLoading(false);
+          return response.json().then((error) => {
+            let errorMessage = error.error || "Something went wrong";
+            alert(errorMessage);
+            throw new Error(errorMessage);
+          });
+        }
+      })
+      .then((data) => {
+        // Store the JWT token in localStorage
+        localStorage.setItem('jwtToken', data.token);
+        console.log('JWT Token:', data.token);
+        
         setIsLoggedIn(true);
         setIsLoading(false);
-      } else {
-        setIsLoading(false);
-        return response.json().then((error) => {
-          let errorMessage = error.error;
-          alert(errorMessage);
-        });
-      }
-    });
+        navigate("/home");
+      })
+      .catch((error) => {
+        console.error("Error sending login data:", error);
+      });
   };
-
-  // if (isLoggedIn) {
-  //   return <Redirect exact to="/dashboard" />;
-  // }
+  
+  if (isLoggedIn) {
+    // Use the if block to conditionally redirect if needed
+    return navigate("/home"); // Use navigate() instead of <Redirect>
+  }
 
   return (
     <main id="login-page">
