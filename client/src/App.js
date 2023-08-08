@@ -13,79 +13,46 @@ import Footer from "./components/footer/footer";
 import SignupPage from "./components/signup/Signup";
 import Dap from "./components/Map";
 import LoginPage from "./components/login/Login";
-import UpdateDestination from './components/UpdateDestination';
-import ParcelDetails from './components/ParcelDetails';
-import AdminDashboard from './components/AdminDashboard';
-
-
-
-
+import UpdateDestination from "./components/UpdateDestination";
+import ParcelDetails from "./components/ParcelDetails";
+import AdminDashboard from "./components/AdminDashboard";
 
 import { Route, Routes } from "react-router-dom";
-
-
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
       <Navbar />
       <Dap />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/parcel" element={<Parcel />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/tracking" element={<Tracking />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/shipping" element={<Shipping />} />
-        <Route path="/get-quote" element={<Quote />} />
-        <Route path="/create-shipment" element={<Parcel />} />
-        <Route path="/track-shipment" element={<ShipmentTracking />} />
-=======
-      
-        <Navbar />
-        
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route  exact path="/parcel" element={<Parcel />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/tracking" element={<Tracking />} />
-          <Route exact path="/services" element={<Services />} />
-          <Route  exact path="/shipping" element={<Shipping />} />
-          <Route exact path="/get-quote" element={<Quote />} />
-          <Route exact path="/create-shipment" element={<Parcel />} />
-          <Route exact path="/update-destination" element={<UpdateDestination />} />
-          <Route exact path="/track-shipment" element={<ShipmentTracking />} />
-          
-          <Route exact path="/login" element={<LoginPage />} />
-          <Route exact path="/register" element={<SignupPage />} />
-         
-          <Route path="/my-shipments/:id" element={ParcelDetails} /> 
-          <Route exact path="/my-shipments" element={ParcelDetails} /> 
-          <Route exact path="/admin" element={AdminDashboard} /> 
-          
-      </Routes>
-      <AdminDashboard/>
-     
-     
-      <ParcelDetails/>
-      
-      
-     
-        <Shipping/>
-        
-        <Advantages />
-        <Services />
-        <Tracking />
-        <About />
-        <Footer />
-      
->>>>>>> ea4b4f6d2762ad2cfcc9d785463b0602975e9509
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/parcel" element={<Parcel />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/tracking" element={<Tracking />} />
+        <Route exact path="/services" element={<Services />} />
+        <Route exact path="/shipping" element={<Shipping />} />
+        <Route exact path="/get-quote" element={<Quote />} />
+        <Route exact path="/create-shipment" element={<Parcel />} />
+        <Route
+          exact
+          path="/update-destination"
+          element={<UpdateDestination />}
+        />
+        <Route exact path="/track-shipment" element={<ShipmentTracking />} />
 
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<SignupPage />} />
+        <Route exact path="/login" element={<LoginPage />} />
+        <Route exact path="/register" element={<SignupPage />} />
+
+        <Route path="/my-shipments/:id" element={ParcelDetails} />
+        <Route exact path="/my-shipments" element={ParcelDetails} />
+        <Route exact path="/admin" element={AdminDashboard} />
       </Routes>
+      <AdminDashboard />
+
+      <ParcelDetails />
+
       <Shipping />
+
       <Advantages />
       <Services />
       <Tracking />
