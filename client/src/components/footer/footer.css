@@ -4,6 +4,7 @@ footer {
   flex-direction: column;
   align-items: center;
   position: relative;
+  color: rgb(127, 124, 124);
 }
 #social-links {
   width: 100%;

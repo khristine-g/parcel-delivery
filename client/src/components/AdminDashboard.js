@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const AdminDashboard = () => {
   const [parcels, setParcels] = useState([]);
@@ -6,14 +6,14 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     // Fetch all parcels for all users
-    fetch('/parcels', {
+    fetch("/parcels", {
       headers: {
-        'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
+        Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
       },
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Failed to fetch parcels');
+          throw new Error("Failed to fetch parcels");
         }
         return response.json();
       })
@@ -31,16 +31,16 @@ const AdminDashboard = () => {
   const handleUpdateStatus = async (parcelId, newStatus) => {
     try {
       const response = await fetch(`/parcels/admin_dashboard/${parcelId}`, {
-        method: 'PUT',
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
         },
         body: JSON.stringify({ status: newStatus }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to update parcel status');
+        throw new Error("Failed to update parcel status");
       }
 
       // Update the parcels state after successful update
@@ -49,7 +49,7 @@ const AdminDashboard = () => {
       );
       setParcels(updatedParcels);
     } catch (error) {
-      console.error('Error updating parcel status:', error);
+      console.error("Error updating parcel status:", error);
       // Handle error response, e.g., show an error message to the user
     }
   };
@@ -59,7 +59,7 @@ const AdminDashboard = () => {
   }
 
   return (
-    <div>
+    <div id="admin-dashboard">
       <h2>Admin Dashboard</h2>
       {parcels.length === 0 ? (
         <p>No parcels found.</p>
@@ -91,10 +91,22 @@ const AdminDashboard = () => {
                 <td>{parcel.status}</td>
                 <td>
                   {/* Buttons to update the parcel status */}
-                  {parcel.status !== 'Delivered' && (
+                  {parcel.status !== "Delivered" && (
                     <>
-                      <button onClick={() => handleUpdateStatus(parcel.id, 'In Transit')}>Mark as In Transit</button>
-                      <button onClick={() => handleUpdateStatus(parcel.id, 'Delivered')}>Mark as Delivered</button>
+                      <button
+                        onClick={() =>
+                          handleUpdateStatus(parcel.id, "In Transit")
+                        }
+                      >
+                        Mark as In Transit
+                      </button>
+                      <button
+                        onClick={() =>
+                          handleUpdateStatus(parcel.id, "Delivered")
+                        }
+                      >
+                        Mark as Delivered
+                      </button>
                     </>
                   )}
                 </td>

@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Dap />
+
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/parcel" element={<Parcel />} />
@@ -43,21 +43,10 @@ function App() {
         <Route exact path="/login" element={<LoginPage />} />
         <Route exact path="/register" element={<SignupPage />} />
 
-        <Route path="/my-shipments/:id" element={ParcelDetails} />
-        <Route exact path="/my-shipments" element={ParcelDetails} />
-        <Route exact path="/admin" element={AdminDashboard} />
+        <Route path="/my-shipments/:id" element={<ParcelDetails />} />
+        <Route exact path="/my-shipments" element={<ParcelDetails />} />
+        <Route exact path="/admin" element={<AdminDashboard />} />
       </Routes>
-      <AdminDashboard />
-
-      <ParcelDetails />
-
-      <Shipping />
-
-      <Advantages />
-      <Services />
-      <Tracking />
-      <About />
-      <Footer />
     </div>
   );
 }
