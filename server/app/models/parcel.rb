@@ -7,6 +7,10 @@ class Parcel < ApplicationRecord
 
     attribute :location, :string
 
+    validates :sender_phone_number, presence: true, format: { with: /\A\+\d+\z/, message: "should be in the format +254123456789" }
+    validates :receiver_phone_number, presence: true, format: { with: /\A\+\d+\z/, message: "should be in the format +254123456789" }
+
+
 
 
 

@@ -149,7 +149,9 @@ class ParcelsController < ApplicationController
       :receiver_address,
       :receiver_country,
       :weight,
-      :type_of_shipment
+      :type_of_shipment,
+      :sender_phone_number,
+      :receiver_phone_number
     )
   end
 

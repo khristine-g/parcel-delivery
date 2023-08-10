@@ -66,6 +66,9 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    africas_talking (0.0.2)
+      json
+      typhoeus
     bcrypt (3.1.19)
     builder (3.2.4)
     byebug (11.1.3)
@@ -82,6 +85,9 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.12.0)
+    ethon (0.16.0)
+      ffi (>= 1.15.0)
+    ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
@@ -89,6 +95,7 @@ GEM
     io-console (0.6.0)
     irb (1.7.0)
       reline (>= 0.3.0)
+    json (2.6.3)
     jwt (2.7.1)
     loofah (2.21.3)
       crass (~> 1.0.2)
@@ -166,6 +173,8 @@ GEM
     sqlite3 (1.6.3-x86_64-linux)
     thor (1.2.2)
     timeout (0.4.0)
+    typhoeus (1.4.0)
+      ethon (>= 0.9.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     warden (1.2.9)
@@ -180,6 +189,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  africas_talking
   bcrypt (~> 3.1.7)
   byebug (~> 11.1)
   debug
