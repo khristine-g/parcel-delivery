@@ -13199,3 +13199,86 @@ Processing by ParcelsController#create as */*
 Completed 201 Created in 174ms (Views: 1.3ms | ActiveRecord: 76.0ms | Allocations: 30673)
 
 
+Started POST "/api/login" for ::1 at 2023-08-10 20:48:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"ivy@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 299ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 14403)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 20:48:42 +0300
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 20:48:42 +0300
+  
+NameError (uninitialized constant ParcelsController::SMSSender):
+  
+app/controllers/parcels_controller.rb:4:in `<class:ParcelsController>'
+app/controllers/parcels_controller.rb:1:in `<top (required)>'
+  
+NameError (uninitialized constant ParcelsController::SMSSender):
+  
+app/controllers/parcels_controller.rb:4:in `<class:ParcelsController>'
+app/controllers/parcels_controller.rb:1:in `<top (required)>'
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 20:48:47 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 20:48:47 +0300
+  
+NameError (uninitialized constant ParcelsController::SMSSender):
+  
+app/controllers/parcels_controller.rb:4:in `<class:ParcelsController>'
+app/controllers/parcels_controller.rb:1:in `<top (required)>'
+  
+NameError (uninitialized constant ParcelsController::SMSSender):
+  
+app/controllers/parcels_controller.rb:4:in `<class:ParcelsController>'
+app/controllers/parcels_controller.rb:1:in `<top (required)>'
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 20:49:04 +0300
+  
+NameError (uninitialized constant ParcelsController::SMSSender):
+  
+app/controllers/parcels_controller.rb:4:in `<class:ParcelsController>'
+app/controllers/parcels_controller.rb:1:in `<top (required)>'
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 20:49:04 +0300
+  
+NameError (uninitialized constant ParcelsController::SMSSender):
+  
+app/controllers/parcels_controller.rb:4:in `<class:ParcelsController>'
+app/controllers/parcels_controller.rb:1:in `<top (required)>'
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 20:50:41 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 20:50:41 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#admin_dashboard as */*
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:62:in `admin_dashboard'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 100ms (Views: 21.7ms | ActiveRecord: 0.7ms | Allocations: 28900)
+
+
+Completed 200 OK in 118ms (Views: 39.2ms | ActiveRecord: 14.6ms | Allocations: 34471)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 20:55:57 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 20:55:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#admin_dashboard as */*
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:62:in `admin_dashboard'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 118ms (Views: 30.7ms | ActiveRecord: 0.8ms | Allocations: 29210)
+
+
+Completed 200 OK in 132ms (Views: 42.4ms | ActiveRecord: 17.5ms | Allocations: 34475)
+
+

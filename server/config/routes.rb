@@ -36,6 +36,8 @@ Rails.application.routes.draw do
 
   get '/parcels/:tracking_number', to: 'parcels#track'
 
+  get '/send_sms', to: 'sms#send_sms'
+
   # ... Other routes ...
 
 end
