@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
 
 const ParcelTracking = () => {
-  const [trackingNumber, setTrackingNumber] = useState('');
+  const [trackingNumber, setTrackingNumber] = useState("");
   const [parcelInfo, setParcelInfo] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
 
-  const jwtToken = localStorage.getItem('jwtToken');
+  const jwtToken = localStorage.getItem("jwtToken");
 
   const handleTrackParcel = async () => {
     try {
       const response = await fetch(`/parcels/${trackingNumber}`, {
-        method: 'GET',
+        method: "GET",
         headers: {
-          'Authorization': `Bearer ${jwtToken}`,
-          'Content-Type': 'application/json'
-        }
+          Authorization: `Bearer ${jwtToken}`,
+          "Content-Type": "application/json",
+        },
       });
 
       if (response.ok) {
@@ -33,14 +33,14 @@ const ParcelTracking = () => {
   };
 
   const handleCancelParcel = async () => {
-    if (parcelInfo && parcelInfo.status === 'pending') {
+    if (parcelInfo && parcelInfo.status === "pending") {
       try {
         const response = await fetch(`/parcels/${parcelInfo.id}`, {
-          method: 'DELETE',
+          method: "DELETE",
           headers: {
-            'Authorization': `Bearer ${jwtToken}`,
-            'Content-Type': 'application/json'
-          }
+            Authorization: `Bearer ${jwtToken}`,
+            "Content-Type": "application/json",
+          },
         });
 
         if (response.ok) {
@@ -57,7 +57,7 @@ const ParcelTracking = () => {
   };
 
   return (
-    <div>
+    <div id="parcel-tracking">
       <h2>Parcel Tracking</h2>
       <Form>
         <Form.Group controlId="trackingNumber">
@@ -70,19 +70,23 @@ const ParcelTracking = () => {
         </Form.Group>
         <Button onClick={handleTrackParcel}>Track Parcel</Button>
       </Form>
-      {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}
+      {errorMsg && <p style={{ color: "red" }}>{errorMsg}</p>}
       {parcelInfo && (
-        <div>
+        <div id="parcel-info">
           <h3>Parcel Information</h3>
-          <p>Parcel ID: {parcelInfo.id}</p>
-          <p>Receiver's Name: {parcelInfo.receiver_name}</p>
-          <p>Receiver's address: {parcelInfo.receiver_address}</p>
-          <p>Receiver's country: {parcelInfo.receiver_country}</p>
-          <p>Status: {parcelInfo.status}</p>
+          <div id="p-row">
+            <div id="parcel-row">
+              <p>Parcel ID: {parcelInfo.id}</p>
+              <p>Receiver's Name: {parcelInfo.receiver_name}</p>
+              <p>Receiver's address: {parcelInfo.receiver_address}</p>
+              <p>Receiver's country: {parcelInfo.receiver_country}</p>
+              <p>Status: {parcelInfo.status}</p>
+            </div>
+          </div>
           <button
-            style={{ backgroundColor: 'red' }}
+            style={{ backgroundColor: "red" }}
             onClick={handleCancelParcel}
-            disabled={parcelInfo.status !== 'pending'}
+            disabled={parcelInfo.status !== "pending"}
           >
             Cancel Parcel
           </button>
@@ -93,7 +97,6 @@ const ParcelTracking = () => {
 };
 
 export default ParcelTracking;
-
 
 // import React, { useState } from 'react';
 

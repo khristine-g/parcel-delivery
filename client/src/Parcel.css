@@ -2,22 +2,21 @@
 .forms-container {
   display: flex;
   gap: 50px;
-  /* border: 1px solid black; */
-  margin: 40px;
-  background-color:  #f0f0f1;
+  border: 1px solid black;
+  margin: 0;
+  background-color: #f0f0f1;
 }
 
 .form-section {
- 
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 25px;
   background-color: #333;
   margin: 20px;
- 
-   /* position: relative; */
-} 
+
+  /* position: relative; */
+}
 
 .form-section h2 {
   margin-bottom: 15px;
@@ -45,7 +44,8 @@ select {
 
 select {
   appearance: none;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>') no-repeat right 8px center;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>')
+    no-repeat right 8px center;
   background-size: 16px 16px;
   padding-right: 30px;
 }

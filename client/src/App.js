@@ -16,7 +16,7 @@ import LoginPage from "./components/login/Login";
 import UpdateDestination from "./components/UpdateDestination";
 import ParcelDetails from "./components/ParcelDetails";
 import AdminDashboard from "./components/AdminDashboard";
-
+import ParcelTracking from "./components/ParcelTracking";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -38,8 +38,8 @@ function App() {
           path="/update-destination"
           element={<UpdateDestination />}
         />
-        <Route exact path="/track-shipment" element={<ShipmentTracking />} />
-
+        {/* <Route exact path="/track-shipment" element={<ShipmentTracking />} /> */}
+        <Route exact path="/track-shipment" element={<ParcelTracking />} />
         <Route exact path="/login" element={<LoginPage />} />
         <Route exact path="/register" element={<SignupPage />} />
 

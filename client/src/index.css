@@ -14,7 +14,7 @@ code {
     monospace;
 }
 
-#receipt-section {
+/* #receipt-section {
   height: 20em;
   width: 100vw;
   background-color: #f9f9f9;
@@ -32,7 +32,7 @@ code {
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-}
+} */
 
 #admin-dashboard {
   padding-top: 5em;
@@ -40,4 +40,33 @@ code {
 
 #parcel-details {
   padding-top: 5em;
+}
+
+#parcel-tracking {
+  padding-top: 6em;
+}
+
+#parcel-info {
+  height: 15em;
+  width: 100vw;
+  /* background-color: #f9f9f9; */
+  display: grid;
+  place-items: center;
+  /* border: black solid; */
+}
+#parcel-row {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#p-row {
+  height: 18em;
+  width: 70%;
+}
+#all-form {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 3em;
 }
