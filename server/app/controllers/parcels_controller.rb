@@ -94,7 +94,7 @@ class ParcelsController < ApplicationController
       return
     end
   
-    if @parcel.update(status: params[:status], current_location: params[:current_location])
+    if @parcel.update(status: params[:status],location: params[:location])
       render json: { message: 'Parcel status and location updated successfully' }, status: :ok
     else
       render json: { error: @parcel.errors.full_messages.join(', ') }, status: :unprocessable_entity

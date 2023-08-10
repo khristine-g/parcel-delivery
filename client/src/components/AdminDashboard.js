@@ -102,7 +102,7 @@ const AdminDashboard = () => {
                   {parcel.status}
                 </td>
                 <td>
-                  {parcel.current_location}
+                  {parcel.location}
                 </td>
                 <td>
   <Form.Control

@@ -5,6 +5,9 @@ class Parcel < ApplicationRecord
     has_one :receiver
 
 
+    attribute :location, :string
+
+
 
 
     private
