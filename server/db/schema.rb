@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_10_121230) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_10_171212) do
   create_table "admins", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
@@ -43,6 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_10_121230) do
     t.string "tracking_number"
     t.string "status", default: "Pending"
     t.string "location"
+    t.string "sender_phone_number"
+    t.string "receiver_phone_number"
     t.index ["tracking_number"], name: "index_parcels_on_tracking_number", unique: true
     t.index ["user_id"], name: "index_parcels_on_user_id"
   end
@@ -63,6 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_10_121230) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_admin", default: false
+    t.string "phone_number"
   end
 
   add_foreign_key "parcels", "users"

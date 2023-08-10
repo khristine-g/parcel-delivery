@@ -9,11 +9,18 @@ const SignupPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState(""); // New phone number state
 
   const navigate = useNavigate(); // Initialize the useNavigate hook
 
   const handleSignup = () => {
-    let userObj = { name, email, password, password_confirmation: passwordConfirm };
+    let userObj = {
+      name,
+      email,
+      password,
+      password_confirmation: passwordConfirm,
+      phone_number: phoneNumber, // Include phone number in user object
+    };
 
     if (passwordConfirm === password) {
       setIsLoading(true);
@@ -87,6 +94,16 @@ const SignupPage = () => {
             type="password"
             value={passwordConfirm}
             onChange={(e) => setPasswordConfirm(e.target.value)}
+            required
+          />
+        </div>
+        {/* New phone number input */}
+        <div className="form-group">
+          <label>Phone Number *</label>
+          <input
+            type="text"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
             required
           />
         </div>
