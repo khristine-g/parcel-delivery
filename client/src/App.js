@@ -8,7 +8,7 @@ import Advantages from './components/Advantages';
 import Parcel from './components/Parcel';
 import Shipping from './components/Shipping';
 import Quote from './components/Quote';
-import ShipmentTracking from './components/ShipmentTracking';
+import ShipmentTracking from './components/ParcelTracking';
 import Footer from "./components/footer/footer";
 import SignupPage from "./components/signup/Signup";
 
@@ -51,7 +51,9 @@ function App() {
           <Route exact path="/admin" element={AdminDashboard} /> 
           
       </Routes>
+
       <AdminDashboard/>
+     
      
      
       <ParcelDetails/>

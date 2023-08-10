@@ -4,17 +4,18 @@ module Api
   class AuthController < ApplicationController
     skip_before_action :authenticate_request, only: [:login]
 
-    def login
-      user = User.find_by(email: params[:email])
+    # In AuthController
+def login
+  user = User.find_by(email: params[:email])
 
-      if user&.authenticate(params[:password])
-        token = JsonWebToken.encode(user_id: user.id)
-        render json: { token: token }, status: :ok
-       
-      else
-        render json: { error: "Invalid credentials" }, status: :unauthorized
-      end
-    end
+  if user&.authenticate(params[:password])
+    token = JsonWebToken.encode(user_id: user.id, is_admin: user.is_admin) # Include is_admin attribute
+    render json: { token: token }, status: :ok
+  else
+    render json: { error: "Invalid credentials" }, status: :unauthorized
+  end
+end
+
 
     # def create
     #   user = User.find_by(email: params[:email])

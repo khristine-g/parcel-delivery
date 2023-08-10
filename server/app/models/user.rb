@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum role: [:user, :admin]
+
   has_many :parcels
   has_secure_password
 
@@ -8,10 +8,12 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
+
+
  
 
-  # Method to determine if the user is an admin
   def admin?
-    role == 'admin'
+    is_admin
   end
+ 
 end

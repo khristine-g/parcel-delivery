@@ -44,8 +44,11 @@ module Server
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost:4000' # Replace with the actual URL of your frontend application
-        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+        origins 'http://localhost:4000'
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head],
+          credentials: true
       end
     end
 
