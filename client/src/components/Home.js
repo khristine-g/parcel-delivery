@@ -33,12 +33,12 @@ function Home() {
         <div className="carousel-inner">
           <div className="item active">
             <img
-              src=" https://corlettexpress.com/storage/2019/12/What-are-the-advantages-of-road-transport-2048x1024.webp"
+              src=" https://builtin.com/sites/www.builtin.com/files/styles/og/public/2022-09/logistics.png"
               alt="Chania"
             />
 
             <div className="carousel-caption">
-              <h3>Train Transportation</h3>
+              {/* <h3></h3> */}
               {/* <p> TransLogic offers a menu of supply chain solutions that can optimize the effectiveness of your product<br></br> promotion and reduce the cost of packaging</p> */}
             </div>
           </div>
@@ -50,7 +50,7 @@ function Home() {
             />
             <div className="carousel-caption">
               <h3>Air Transportation</h3>
-              <p>Thank you, Chicago!</p>
+              {/* <p>Thank you, Chicago!</p> */}
             </div>
           </div>
 
@@ -61,7 +61,7 @@ function Home() {
             />
             <div className="carousel-caption   d-md-block">
               <h3>Ocean Transportation</h3>
-              <p>We love the Big Apple!</p>
+              {/* <p>We love the Big Apple!</p> */}
             </div>
           </div>
         </div>

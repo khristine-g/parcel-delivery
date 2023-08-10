@@ -1,7 +1,7 @@
 #login-page {
   width: 100vw;
   height: 100vh;
-
+  background-image: url("https://captainslogistics.com/wp-content/uploads/2018/09/63010089_s.jpg");
   background-size: cover;
   display: flex;
   align-items: center;
@@ -12,6 +12,7 @@
 #login-page form {
   height: auto;
   width: 25%;
+  opacity: 60%;
   background: rgba(0, 0, 0, 0.82);
   border-radius: 24px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
