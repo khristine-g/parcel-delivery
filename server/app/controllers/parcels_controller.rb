@@ -1,10 +1,9 @@
 class ParcelsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :update, :index, :show]
-  before_action :authorize_admin, only: [:admin_dashboard]
-  
-  
+  before_action :authenticate_admin!, only: [:admin_dashboard]
 
- 
+  
+  
 
   def index
     @parcels = current_user.parcels
@@ -24,15 +23,21 @@ class ParcelsController < ApplicationController
     end
   end
 
-  def show
-    @parcel = current_user.parcels.find_by(id: params[:id])
 
+  def show
+    @parcel = current_user.parcels.find_by(tracking_number: params[:id])
+  
     if @parcel
       render json: @parcel, status: :ok
     else
       render json: { error: "Parcel not found" }, status: :not_found
     end
   end
+  
+  
+
+  
+
   def update
     @parcel = current_user.parcels.find_by(id: params[:id])
 
@@ -51,14 +56,86 @@ class ParcelsController < ApplicationController
   
 
   def admin_dashboard
-    # Check if the current user is an admin
-    if current_user.admin?
+    if current_user&.is_admin
       @parcels = Parcel.all
       render json: @parcels, status: :ok
     else
       render json: { error: "Unauthorized. Only admin can access the dashboard." }, status: :unauthorized
     end
   end
+  
+
+  def update_admin_dashboard
+    @parcel = Parcel.find_by(id: params[:id])
+
+    if @parcel.nil?
+      render json: { error: "Parcel not found" }, status: :not_found
+      return
+    end
+
+    if @parcel.update(parcel_status_params)
+      render json: { message: 'Parcel status updated successfully' }, status: :ok
+    else
+      render json: { error: @parcel.errors.full_messages.join(', ') }, status: :unprocessable_entity
+    end
+  end
+
+  def track
+    tracking_number = params[:tracking_number]
+    parcel = current_user.parcels.find_by(tracking_number: tracking_number)
+
+    if parcel
+      render json: parcel
+    else
+      render json: { error: 'Parcel not found' }, status: :not_found
+    end
+  end
+
+
+
+  # def track
+  #   tracking_number = params[:tracking_number]
+  #   parcel = Parcel.find_by(tracking_number: tracking_number)
+  
+  #   if parcel
+  #     render json: parcel
+  #   else
+  #     render json: { error: 'Parcel not found' }, status: :not_found
+  #   end
+  # end
+
+
+  def destroy
+    @parcel = Parcel.find_by(id: params[:id])
+
+    if @parcel.nil?
+      render json: { error: "Parcel not found" }, status: :not_found
+      return
+    end
+
+    if @parcel.destroy
+      render json: { message: 'Parcel deleted successfully' }, status: :ok
+    else
+      render json: { error: @parcel.errors.full_messages.join(', ') }, status: :unprocessable_entity
+    end
+  end
+
+  def update_status_and_location
+    @parcel = Parcel.find_by(id: params[:id])
+  
+    if @parcel.nil?
+      render json: { error: "Parcel not found" }, status: :not_found
+      return
+    end
+  
+    if @parcel.update(status: params[:status],location: params[:location])
+      render json: { message: 'Parcel status and location updated successfully' }, status: :ok
+    else
+      render json: { error: @parcel.errors.full_messages.join(', ') }, status: :unprocessable_entity
+    end
+  end
+  
+
 
   private
 
@@ -80,116 +157,16 @@ class ParcelsController < ApplicationController
     params.require(:parcel).permit(:receiver_name, :receiver_email, :receiver_address, :receiver_country)
   end
 
-end
+  def authenticate_admin!
+    unless current_user&.is_admin
+      render json: { error: "Unauthorized. Only admin can access the dashboard." }, status: :unauthorized
+    end
+  end
+    def parcel_status_params
+      params.require(:parcel).permit(:status)
+    end
+  end
 
 
-#   def index
-#     parcels = Parcel.all
 
-#     if parcels.any?
-#       render json: parcels, status: :ok
-#     else
-#       render json: { error: "No parcels found" }, status: :not_found
-#     end
-#   end
 
-  
-#   def show
-#     if @parcel
-#       # Users can see the details of a delivery order.
-#       render json: @parcel, status: :ok
-#     else
-#       render json: { error: "No parcels found" }, status: :not_found
-#     end
-#     # (Note: Implement the email notification logic separately)
-#   end
-  
-#   def update
-#     # The user can only cancel or change the destination of a parcel delivery when the parcel’s status is yet to be marked as delivered.
-#     if @parcel
-#       if current_user_can_update_parcel? && @parcel.update(parcel_update_params) && @admin_use
-#         # The user gets a real-time email notification when Admin changes the status of their parcel..
-#         render json: @parcel, status: :ok
-#       else
-#         render json: { error: "Cannot update the parcel" }, status: :unprocessable_entity
-#       end
-#     else
-#       render json: { error: "Parcel not found" }, status: :not_found
-#     end
-#   end
-
-#   def create
-#     # creating the parcel
-    
-#     if (parcel = Parcel.create(parcel_params)) && (receiver = Reciever.create(receiver_params)) && current_user.update(user_params)
-#       render json: parcel, status: :created
-#     else
-#       render json: { error: "Parcel not created", errors: parcel.errors.full_messages }, status: :unprocessable_entity
-#     end
-    
-#   end
-
-  
-  
-#   def destroy
-#     if @parcel
-#       # Users can cancel a parcel delivery order.
-#       @parcel.destroy!
-#       head :no_content
-#     else
-#       render json: { error: "Parcel not found" }, status: :not_found
-#     end
-#   end
-
-#   private
-
-#   def find_parcel
-#     @parcel = Parcel.find_by(id: params['id'])
-#   end
-
-#   def parcel_params
-#     params.require(:parcel).permit!(:weight, :password, :present_location, :status, :user_id, :destination, :reciever_id)
-#   end
-
-#   def reciever_params
-#     params.require(:parcel).permit!(:username, :password, :password_confirmation, :email, :phone_number)
-#   end
-
-#   def user_params
-#     params.require(:parcel).permit!(:phone_number, :address)
-#   end
-
-#   @admin_use = false
-
-#   def parcel_update_params
-#     if current_user_is_an_admin?
-#       @admin_use = true
-#       parcel_params_for_admin
-#     else
-#       parcel_params_for_user
-#       @admin_use = false
-#     end
-#   end
-
-#   # Permit destination change for users
-#   def parcel_params_for_user
-#     params.require(:parcel).permit(:destination)
-#   end
-
-#   # Permit status and present location change for admins
-#   def parcel_params_for_admin
-#     params.require(:parcel).permit(:status, :present_location)
-#   end
-
-#   def current_user_can_update_parcel?
-#     # Check if the parcel exists and is associated with the current user
-#     return false unless @parcel && @parcel.user_id == current_user.id
-
-#     # Check if the parcel's status is not marked as delivered
-#     return false if @parcel.status == 'delivered'
-
-#     # If all conditions are met, the current user can update the parcel
-#     true
-#   end
-
-# end
