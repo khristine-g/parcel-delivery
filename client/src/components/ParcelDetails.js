@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap';
-import UpdateDestination from './UpdateDestination';
+import React, { useState, useEffect } from "react";
+import { Table } from "react-bootstrap";
+import UpdateDestination from "./UpdateDestination";
 
 const ParcelDetails = () => {
   const [parcels, setParcels] = useState([]);
@@ -13,13 +13,13 @@ const ParcelDetails = () => {
   // Fetch all parcels associated with the current user
   const fetchParcels = async () => {
     try {
-      const response = await fetch('/parcels', {
+      const response = await fetch("/parcels", {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
+          Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
         },
       });
       if (!response.ok) {
-        throw new Error('Failed to fetch parcels');
+        throw new Error("Failed to fetch parcels");
       }
       const data = await response.json();
       setParcels(data);
@@ -37,10 +37,10 @@ const ParcelDetails = () => {
     try {
       // Make a PUT request to update the parcel destination
       const response = await fetch(`/parcels/${updatedParcel.id}`, {
-        method: 'PUT',
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
         },
         body: JSON.stringify({
           parcel: {
@@ -53,20 +53,20 @@ const ParcelDetails = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to update parcel destination');
+        throw new Error("Failed to update parcel destination");
       }
 
-      console.log('Parcel destination updated successfully');
+      console.log("Parcel destination updated successfully");
       // Handle success response, e.g., show a success message or update the state
       fetchParcels(); // Refresh the parcel data after successful update
     } catch (error) {
-      console.error('Error updating parcel destination:', error);
+      console.error("Error updating parcel destination:", error);
       // Handle error response, e.g., show an error message to the user
     }
   };
 
   return (
-    <div>
+    <div id="parcel-details">
       <h2>My Shipments</h2>
       {parcels.length === 0 ? (
         <p>No parcels found.</p>
@@ -95,9 +95,13 @@ const ParcelDetails = () => {
                 <td>{parcel.receiver_country}</td>
                 <td>{parcel.weight}</td>
                 <td>{parcel.type_of_shipment}</td>
-                <td>${calculateCost(parcel.weight)}</td> {/* Display the cost here */}
+                <td>${calculateCost(parcel.weight)}</td>{" "}
+                {/* Display the cost here */}
                 <td>
-                  <UpdateDestination parcel={parcel} onUpdateDestination={handleUpdateDestination} />
+                  <UpdateDestination
+                    parcel={parcel}
+                    onUpdateDestination={handleUpdateDestination}
+                  />
                 </td>
               </tr>
             ))}
@@ -215,11 +219,9 @@ export default ParcelDetails;
 
 // export default ParcelDetails;
 
-
 // import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 // import { Table } from 'react-bootstrap';
-
 
 // const ParcelDetails = () => {
 //   const [parcels, setParcels] = useState([]);
@@ -256,7 +258,7 @@ export default ParcelDetails;
 //           <thead>
 //             <tr>
 //               <th>Parcel ID</th>
-              
+
 //               <th>Receiver's Name</th>
 //               <th>Receiver's email</th>
 //               <th>Receiver's address</th>
@@ -264,34 +266,29 @@ export default ParcelDetails;
 //               <th>Parcel weight</th>
 //               <th>Type of shipment</th>
 
-
 //               {/* Add more table headers for additional parcel details */}
-             
+
 //             </tr>
 //           </thead>
 //           <tbody>
 //             {parcels.map((parcel) => (
 //               <tr key={parcel.id}>
 //                 <td>{parcel.id}</td>
-                
+
 //                 <td>{parcel.receiver_name}</td>
 //                 <td>{parcel.receiver_email}</td>
 //                 <td>{parcel.receiver_address}</td>
 //                 <td>{parcel.receiver_country}</td>
 //                 <td>{parcel.weight}</td>
 //                 <td>{parcel.type_of_shipment}</td>
-               
-                
 
-               
-                
 //               </tr>
 //             ))}
 //           </tbody>
 //         </Table>
 //       )}
 //     </div>
-    
+
 //   );
 // };
 
