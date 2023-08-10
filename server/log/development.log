@@ -13199,3 +13199,107 @@ Processing by ParcelsController#create as */*
 Completed 201 Created in 174ms (Views: 1.3ms | ActiveRecord: 76.0ms | Allocations: 30673)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPhoneNumberToUsers (20230810162953)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "phone_number" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (6.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230810162953"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPhoneNumberToParcels (20230810165209)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "parcels" ADD "phone_number" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230810165209"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemovePhoneNumberFromParcels (20230810170808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aparcels" ("id" integer NOT NULL PRIMARY KEY, "sender_name" varchar DEFAULT NULL, "sender_email" varchar DEFAULT NULL, "sender_address" varchar DEFAULT NULL, "receiver_name" varchar DEFAULT NULL, "receiver_email" varchar DEFAULT NULL, "receiver_address" varchar DEFAULT NULL, "receiver_country" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "type_of_shipment" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL, "tracking_number" varchar DEFAULT NULL, "status" varchar DEFAULT 'Pending', "location" varchar DEFAULT NULL, "phone_number" varchar DEFAULT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aparcels_on_tracking_number" ON "aparcels" ("tracking_number")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "tindex_aparcels_on_user_id" ON "aparcels" ("user_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "aparcels" ("id","sender_name","sender_email","sender_address","receiver_name","receiver_email","receiver_address","receiver_country","weight","type_of_shipment","created_at","updated_at","user_id","tracking_number","status","location","phone_number")
+                     SELECT "id","sender_name","sender_email","sender_address","receiver_name","receiver_email","receiver_address","receiver_country","weight","type_of_shipment","created_at","updated_at","user_id","tracking_number","status","location","phone_number" FROM "parcels"[0m
+  [1m[35m (3.2ms)[0m  [1m[35mDROP TABLE "parcels"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "parcels" ("id" integer NOT NULL PRIMARY KEY, "sender_name" varchar DEFAULT NULL, "sender_email" varchar DEFAULT NULL, "sender_address" varchar DEFAULT NULL, "receiver_name" varchar DEFAULT NULL, "receiver_email" varchar DEFAULT NULL, "receiver_address" varchar DEFAULT NULL, "receiver_country" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "type_of_shipment" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL, "tracking_number" varchar DEFAULT NULL, "status" varchar DEFAULT 'Pending', "location" varchar DEFAULT NULL, CONSTRAINT "fk_rails_428af28b9c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_parcels_on_user_id" ON "parcels" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_parcels_on_tracking_number" ON "parcels" ("tracking_number")[0m
+  [1m[35m (4.7ms)[0m  [1m[32mINSERT INTO "parcels" ("id","sender_name","sender_email","sender_address","receiver_name","receiver_email","receiver_address","receiver_country","weight","type_of_shipment","created_at","updated_at","user_id","tracking_number","status","location")
+                     SELECT "id","sender_name","sender_email","sender_address","receiver_name","receiver_email","receiver_address","receiver_country","weight","type_of_shipment","created_at","updated_at","user_id","tracking_number","status","location" FROM "aparcels"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aparcels"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230810170808"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSenderAndReceiverPhoneNumbersToParcels (20230810171212)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "parcels" ADD "sender_phone_number" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "parcels" ADD "receiver_phone_number" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230810171212"]]
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/login" for ::1 at 2023-08-10 20:46:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"ivy@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 401 Unauthorized in 89ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 25337)
+
+
+Started POST "/api/signup" for ::1 at 2023-08-10 20:47:29 +0300
+Processing by Api::UsersController#create as */*
+  Parameters: {"name"=>"Ivy", "email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone_number"=>"0734274563"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:17:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/users_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 628ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 22062)
+
+
+Started POST "/api/signup" for ::1 at 2023-08-10 20:47:53 +0300
+Processing by Api::UsersController#create as */*
+  Parameters: {"name"=>"Ivy", "email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone_number"=>"+2540734274563"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:17:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "is_admin", "phone_number") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ivy"], ["email", "ivy@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-08-10 17:47:54.059752"], ["updated_at", "2023-08-10 17:47:54.059752"], ["is_admin", nil], ["phone_number", "+2540734274563"]]
+  ↳ app/controllers/api/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:17:in `create'
+Completed 201 Created in 537ms (Views: 0.4ms | ActiveRecord: 7.9ms | Allocations: 2783)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 20:48:42 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"ivy@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 496ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 827)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 20:48:59 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 817)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 20:49:01 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.4ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 67ms (Views: 14.6ms | ActiveRecord: 3.1ms | Allocations: 10133)
+
+

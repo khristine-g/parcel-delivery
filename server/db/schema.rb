@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_10_121230) do
-  create_table "admins", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_admins_on_email"
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2023_08_10_171212) do
   create_table "mails", force: :cascade do |t|
     t.integer "user_id"
     t.integer "receiver_id"
@@ -64,7 +56,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_10_121230) do
     t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "is_admin", default: false
+    t.boolean "is_admin"
+    t.string "phone_number"
   end
 
   add_foreign_key "parcels", "users"
