@@ -11649,3 +11649,904 @@ Processing by ParcelsController#show as */*
 Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 1592)
 
 
+Started DELETE "/parcels/8" for 127.0.0.1 at 2023-08-10 16:38:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [DELETE] "/parcels/8"):
+  
+Started DELETE "/parcels/8" for 127.0.0.1 at 2023-08-10 16:40:02 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for ParcelsController):
+  
+actionpack (7.0.5) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.5) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.5) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.5) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/parcels/8" for 127.0.0.1 at 2023-08-10 16:42:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#destroy as */*
+  Parameters: {"id"=>"8", "parcel"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:91:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:98:in `destroy'
+  [1m[36mParcel Destroy (0.4ms)[0m  [1m[31mDELETE FROM "parcels" WHERE "parcels"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/parcels_controller.rb:98:in `destroy'
+  [1m[36mTRANSACTION (84.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:98:in `destroy'
+Completed 200 OK in 160ms (Views: 0.8ms | ActiveRecord: 86.9ms | Allocations: 22730)
+
+
+Started GET "/parcels/8CAD1EOC96C3" for 127.0.0.1 at 2023-08-10 16:42:16 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"8CAD1EOC96C3", "parcel"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 46ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 5510)
+
+
+Started GET "/parcels/8CAD1EOC96C3" for 127.0.0.1 at 2023-08-10 16:42:22 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"8CAD1EOC96C3", "parcel"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.6ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 23ms (Views: 0.8ms | ActiveRecord: 1.3ms | Allocations: 1386)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 16:42:25 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 16:42:25 +0300
+Completed 401 Unauthorized in 6ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1139)
+
+
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 21ms (Views: 13.0ms | ActiveRecord: 1.8ms | Allocations: 3193)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 16:42:44 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"ivy@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 254ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 993)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 16:42:56 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 16:42:56 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[36mParcel Load (0.6ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+  ↳ app/controllers/parcels_controller.rb:55:in `admin_dashboard'
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 0.9ms | Allocations: 2271)
+
+
+Completed 200 OK in 32ms (Views: 14.6ms | ActiveRecord: 0.8ms | Allocations: 4559)
+
+
+Started PUT "/parcels/5/update_status_and_location" for 127.0.0.1 at 2023-08-10 16:43:21 +0300
+Processing by ParcelsController#update_status_and_location as */*
+  Parameters: {"status"=>"delivered", "current_location"=>"California", "id"=>"5", "parcel"=>{"status"=>"delivered"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:106:in `update_status_and_location'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:113:in `update_status_and_location'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:113:in `update_status_and_location'
+  [1m[36mParcel Update (0.7ms)[0m  [1m[33mUPDATE "parcels" SET "updated_at" = ?, "status" = ? WHERE "parcels"."id" = ?[0m  [["updated_at", "2023-08-10 13:43:21.765864"], ["status", "delivered"], ["id", 5]]
+  ↳ app/controllers/parcels_controller.rb:113:in `update_status_and_location'
+  [1m[36mTRANSACTION (75.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:113:in `update_status_and_location'
+Completed 200 OK in 108ms (Views: 0.9ms | ActiveRecord: 77.0ms | Allocations: 4882)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 16:43:25 +0300
+Processing by ParcelsController#admin_dashboard as */*
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 16:43:25 +0300
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.7ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:55:in `admin_dashboard'
+Completed 200 OK in 14ms (Views: 6.4ms | ActiveRecord: 1.3ms | Allocations: 3171)
+
+
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1362)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 16:43:37 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"kris@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"kris@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kris@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 317ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 689)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 16:43:42 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 16:43:42 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.5ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 2004)
+
+
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.7ms | Allocations: 2079)
+
+
+Started POST "/parcels" for ::1 at 2023-08-10 16:44:47 +0300
+Processing by ParcelsController#create as */*
+  Parameters: {"parcel"=>{"sender_name"=>"Khristine Githige", "sender_email"=>"kris@gmail.com", "sender_address"=>"kahawa sukari", "receiver_name"=>"Tia Lynn", "receiver_email"=>"tia@gmail.com", "receiver_address"=>"Florida", "receiver_country"=>"United States", "weight"=>"15", "type_of_shipment"=>"air"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:19:in `create'
+  [1m[36mParcel Create (1.5ms)[0m  [1m[32mINSERT INTO "parcels" ("sender_name", "sender_email", "sender_address", "receiver_name", "receiver_email", "receiver_address", "receiver_country", "weight", "type_of_shipment", "created_at", "updated_at", "user_id", "tracking_number", "status", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["sender_name", "Khristine Githige"], ["sender_email", "kris@gmail.com"], ["sender_address", "kahawa sukari"], ["receiver_name", "Tia Lynn"], ["receiver_email", "tia@gmail.com"], ["receiver_address", "Florida"], ["receiver_country", "United States"], ["weight", "15"], ["type_of_shipment", "air"], ["created_at", "2023-08-10 13:44:47.446373"], ["updated_at", "2023-08-10 13:44:47.446373"], ["user_id", 1], ["tracking_number", "7AB5AF2C4DD1"], ["status", "Pending"], ["location", nil]]
+  ↳ app/controllers/parcels_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (88.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:19:in `create'
+Completed 201 Created in 112ms (Views: 1.0ms | ActiveRecord: 90.3ms | Allocations: 3222)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 16:46:22 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.4ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 6ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1442)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 16:46:31 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 10ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1374)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 16:46:49 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 16:46:49 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 2083)
+
+
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 662)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 16:47:20 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 1374)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 16:47:28 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.5ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 22ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 1377)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 16:48:31 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 16:48:31 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 675)
+
+
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.4ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.6ms | Allocations: 2066)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 16:48:38 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 662)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 16:48:38 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.5ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 18ms (Views: 8.2ms | ActiveRecord: 1.1ms | Allocations: 2032)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 16:48:47 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 10ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1376)
+
+
+Started POST "/parcels" for ::1 at 2023-08-10 16:52:48 +0300
+Processing by ParcelsController#create as */*
+  Parameters: {"parcel"=>{"sender_name"=>"John ", "sender_email"=>"john@gmail.com", "sender_address"=>"Karen", "receiver_name"=>"Mark", "receiver_email"=>"mark@gmail.com", "receiver_address"=>"Newyork", "receiver_country"=>"United States", "weight"=>"17", "type_of_shipment"=>"air"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:19:in `create'
+  [1m[36mParcel Create (1.1ms)[0m  [1m[32mINSERT INTO "parcels" ("sender_name", "sender_email", "sender_address", "receiver_name", "receiver_email", "receiver_address", "receiver_country", "weight", "type_of_shipment", "created_at", "updated_at", "user_id", "tracking_number", "status", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["sender_name", "John "], ["sender_email", "john@gmail.com"], ["sender_address", "Karen"], ["receiver_name", "Mark"], ["receiver_email", "mark@gmail.com"], ["receiver_address", "Newyork"], ["receiver_country", "United States"], ["weight", "17"], ["type_of_shipment", "air"], ["created_at", "2023-08-10 13:52:48.655203"], ["updated_at", "2023-08-10 13:52:48.655203"], ["user_id", 1], ["tracking_number", "C76923208F8D"], ["status", "Pending"], ["location", nil]]
+  ↳ app/controllers/parcels_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (72.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:19:in `create'
+Completed 201 Created in 96ms (Views: 0.3ms | ActiveRecord: 74.7ms | Allocations: 2908)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 16:54:03 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 15ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 1374)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 16:57:05 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.4ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 23ms (Views: 0.8ms | ActiveRecord: 2.8ms | Allocations: 5218)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 17:00:48 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 18ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 5150)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:00:52 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:00:52 +0300
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 952)
+
+
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 1.1ms | Allocations: 5894)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:00:57 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 7ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1374)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:03:21 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.5ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 18ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 1375)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:03:24 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.6ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 28ms (Views: 0.9ms | ActiveRecord: 1.9ms | Allocations: 1374)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 17:06:11 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"kris@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"kris@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kris@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 318ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 875)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:06:52 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 8ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1375)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:07:00 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (1.0ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 21ms (Views: 0.8ms | ActiveRecord: 1.6ms | Allocations: 1374)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 17:11:29 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 8ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1374)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 17:12:04 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"kris@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"kris@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kris@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 332ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 659)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:12:12 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 862)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:12:12 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.6ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 0.8ms | Allocations: 2260)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 17:12:34 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.5ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 19ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 1374)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:15:35 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:15:35 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 22ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 4558)
+
+
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 121ms (Views: 16.5ms | ActiveRecord: 3.4ms | Allocations: 11651)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 17:15:52 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"ivy@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 310ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 885)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:16:02 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:16:02 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:56:in `admin_dashboard'
+Completed 200 OK in 21ms (Views: 13.0ms | ActiveRecord: 1.3ms | Allocations: 4106)
+
+
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 1.4ms | Allocations: 5138)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 17:16:33 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"ivy@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 251ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 657)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 17:16:54 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"kris@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"kris@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kris@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 300ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 657)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:16:59 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 664)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:16:59 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.6ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.7ms | Allocations: 2260)
+
+
+Started GET "/parcels/8CAD1EOC96C3" for 127.0.0.1 at 2023-08-10 17:17:40 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"8CAD1EOC96C3", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.4ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 200 OK in 10ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 1714)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:18:25 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 12ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1375)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:18:29 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.8ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 28ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 1374)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:18:35 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:18:35 +0300
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1101)
+
+
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 13ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 2373)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:18:38 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.9ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 17ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 1442)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 17:18:47 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.7ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 26ms (Views: 0.8ms | ActiveRecord: 1.4ms | Allocations: 1374)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 17:22:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 69ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 16742)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 17:27:30 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.1ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:27:34 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 692)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:27:34 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.4ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 1.5ms | Allocations: 10707)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:27:37 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.1ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:27:in `show'
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1386)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:30:51 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 404 Not Found in 70ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 16746)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:33:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 404 Not Found in 68ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 16746)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:38:37 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.7ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "7AB5AF2C4DD1"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 200 OK in 68ms (Views: 1.0ms | ActiveRecord: 3.0ms | Allocations: 13579)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 17:38:47 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "C76923208F8D"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 1603)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 17:39:35 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.8ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "C76923208F8D"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 200 OK in 30ms (Views: 1.5ms | ActiveRecord: 2.7ms | Allocations: 8766)
+
+
+Started GET "/parcels/7AB5AF2C4DD1" for 127.0.0.1 at 2023-08-10 17:39:44 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"7AB5AF2C4DD1", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "7AB5AF2C4DD1"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1593)
+
+
+Started GET "/parcels/8CAD1EOC96C3" for 127.0.0.1 at 2023-08-10 17:40:13 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"8CAD1EOC96C3", "parcel"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "8CAD1EOC96C3"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 404 Not Found in 8ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1376)
+
+
+Started GET "/parcels/8CAD1EOC96C3" for 127.0.0.1 at 2023-08-10 17:40:54 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"8CAD1EOC96C3", "parcel"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.5ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "8CAD1EOC96C3"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 404 Not Found in 18ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 1375)
+
+
+Started GET "/parcels/ghhjj" for 127.0.0.1 at 2023-08-10 17:41:11 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"ghhjj", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "ghhjj"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 404 Not Found in 9ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1375)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:41:22 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:41:22 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 690)
+
+
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.4ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 0.5ms | Allocations: 2547)
+
+
+Started GET "/parcels/hjjj" for 127.0.0.1 at 2023-08-10 17:41:26 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"hjjj", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "hjjj"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1375)
+
+
+Started GET "/parcels/hjjj" for 127.0.0.1 at 2023-08-10 17:41:30 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"hjjj", "parcel"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.7ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "hjjj"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 404 Not Found in 29ms (Views: 1.2ms | ActiveRecord: 1.2ms | Allocations: 1376)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:49:40 +0300
+Processing by ParcelsController#index as */*
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:49:40 +0300
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by ParcelsController#admin_dashboard as */*
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 13ms (Views: 5.7ms | ActiveRecord: 1.0ms | Allocations: 3557)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2869)
+
+
+Started GET "/parcels/ghgh" for 127.0.0.1 at 2023-08-10 17:49:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"ghgh", "parcel"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "ghgh"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 404 Not Found in 50ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 16758)
+
+
+Started GET "/parcels/8CAD1EOC96C3" for 127.0.0.1 at 2023-08-10 17:50:09 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"8CAD1EOC96C3", "parcel"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "8CAD1EOC96C3"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 404 Not Found in 12ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/parcels/C76923208F8D" for 127.0.0.1 at 2023-08-10 17:50:15 +0300
+Processing by ParcelsController#show as */*
+  Parameters: {"id"=>"C76923208F8D", "parcel"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."tracking_number" = ? LIMIT ?[0m  [["user_id", 1], ["tracking_number", "C76923208F8D"], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:28:in `show'
+Completed 200 OK in 41ms (Views: 1.6ms | ActiveRecord: 1.0ms | Allocations: 9758)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:50:36 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 2559)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 17:50:49 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"ivy@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:9:in `login'
+Completed 200 OK in 255ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 985)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:50:56 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1364)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:51:00 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.7ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 1362)
+
+
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-08-10 17:51:08 +0300
+Processing by ParcelsController#admin_dashboard as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels"[0m
+  ↳ app/controllers/parcels_controller.rb:61:in `admin_dashboard'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 3616)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 17:51:08 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.1ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/parcels_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 1.9ms | Allocations: 1362)
+
+

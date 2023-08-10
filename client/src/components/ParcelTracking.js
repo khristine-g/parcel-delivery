@@ -4,15 +4,16 @@ import { Form, Button } from 'react-bootstrap';
 const ParcelTracking = () => {
   const [trackingNumber, setTrackingNumber] = useState('');
   const [parcelInfo, setParcelInfo] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
 
-  const jwtToken = localStorage.getItem('jwtToken'); // Get JWT token from local storage
+  const jwtToken = localStorage.getItem('jwtToken');
 
   const handleTrackParcel = async () => {
     try {
       const response = await fetch(`/parcels/${trackingNumber}`, {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${jwtToken}`, // Include JWT token in headers
+          'Authorization': `Bearer ${jwtToken}`,
           'Content-Type': 'application/json'
         }
       });
@@ -20,8 +21,11 @@ const ParcelTracking = () => {
       if (response.ok) {
         const data = await response.json();
         setParcelInfo(data);
+        setErrorMsg(null);
       } else {
-        // Handle error, e.g., show an error message to the user
+        const errorData = await response.json();
+        setParcelInfo(null);
+        setErrorMsg(errorData.error);
       }
     } catch (error) {
       console.error(error);
@@ -32,18 +36,19 @@ const ParcelTracking = () => {
     if (parcelInfo && parcelInfo.status === 'pending') {
       try {
         const response = await fetch(`/parcels/${parcelInfo.id}`, {
-          method: 'DELETE', // Send a DELETE request to cancel the parcel
+          method: 'DELETE',
           headers: {
-            'Authorization': `Bearer ${jwtToken}`, // Include JWT token in headers
+            'Authorization': `Bearer ${jwtToken}`,
             'Content-Type': 'application/json'
           }
         });
 
         if (response.ok) {
           // Handle successful cancellation, e.g., show a confirmation message
-          setParcelInfo(null); // Clear the parcel info after cancellation
+          setParcelInfo(null);
         } else {
-          // Handle error, e.g., show an error message to the user
+          const errorData = await response.json();
+          setErrorMsg(errorData.error);
         }
       } catch (error) {
         console.error(error);
@@ -65,6 +70,7 @@ const ParcelTracking = () => {
         </Form.Group>
         <Button onClick={handleTrackParcel}>Track Parcel</Button>
       </Form>
+      {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}
       {parcelInfo && (
         <div>
           <h3>Parcel Information</h3>
@@ -73,12 +79,13 @@ const ParcelTracking = () => {
           <p>Receiver's address: {parcelInfo.receiver_address}</p>
           <p>Receiver's country: {parcelInfo.receiver_country}</p>
           <p>Status: {parcelInfo.status}</p>
-          <button style ={{backgroundColor:"red"}}
-      onClick={handleCancelParcel}
-      disabled={parcelInfo.status !== 'pending'}
-    >
-      Cancel Parcel
-    </button>
+          <button
+            style={{ backgroundColor: 'red' }}
+            onClick={handleCancelParcel}
+            disabled={parcelInfo.status !== 'pending'}
+          >
+            Cancel Parcel
+          </button>
         </div>
       )}
     </div>

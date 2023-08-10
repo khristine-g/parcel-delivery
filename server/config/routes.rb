@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :create]
 
   # Parcels routes
-  resources :parcels, only: [:create, :update, :index, :show] do
+  resources :parcels, only: [:create, :update, :index, :show, :destroy]do
+ 
     member do
       put 'update_destination'
       put 'update_status_and_location'

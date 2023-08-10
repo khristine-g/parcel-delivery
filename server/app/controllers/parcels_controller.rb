@@ -23,15 +23,21 @@ class ParcelsController < ApplicationController
     end
   end
 
-  def show
-    @parcel = current_user.parcels.find_by(id: params[:id])
 
+  def show
+    @parcel = current_user.parcels.find_by(tracking_number: params[:id])
+  
     if @parcel
       render json: @parcel, status: :ok
     else
       render json: { error: "Parcel not found" }, status: :not_found
     end
   end
+  
+  
+
+  
+
   def update
     @parcel = current_user.parcels.find_by(id: params[:id])
 
@@ -74,15 +80,43 @@ class ParcelsController < ApplicationController
     end
   end
 
-
   def track
     tracking_number = params[:tracking_number]
-    parcel = Parcel.find_by(tracking_number: tracking_number)
-  
+    parcel = current_user.parcels.find_by(tracking_number: tracking_number)
+
     if parcel
       render json: parcel
     else
       render json: { error: 'Parcel not found' }, status: :not_found
+    end
+  end
+
+
+
+  # def track
+  #   tracking_number = params[:tracking_number]
+  #   parcel = Parcel.find_by(tracking_number: tracking_number)
+  
+  #   if parcel
+  #     render json: parcel
+  #   else
+  #     render json: { error: 'Parcel not found' }, status: :not_found
+  #   end
+  # end
+
+
+  def destroy
+    @parcel = Parcel.find_by(id: params[:id])
+
+    if @parcel.nil?
+      render json: { error: "Parcel not found" }, status: :not_found
+      return
+    end
+
+    if @parcel.destroy
+      render json: { message: 'Parcel deleted successfully' }, status: :ok
+    else
+      render json: { error: @parcel.errors.full_messages.join(', ') }, status: :unprocessable_entity
     end
   end
 
