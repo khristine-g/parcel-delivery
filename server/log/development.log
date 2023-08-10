@@ -8464,3 +8464,284 @@ Processing by ParcelsController#index as */*
 Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1373)
 
 
+Started POST "/api/login" for ::1 at 2023-08-09 19:24:36 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"hamza@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"hamza@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hamza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:8:in `login'
+Completed 200 OK in 349ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 41920)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:25:49 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (1.0ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 98ms (Views: 37.7ms | ActiveRecord: 2.5ms | Allocations: 28282)
+
+
+Started PUT "/parcels/6" for 127.0.0.1 at 2023-08-09 19:27:02 +0300
+Processing by ParcelsController#update as */*
+  Parameters: {"parcel"=>{"receiver_name"=>"Joe", "receiver_email"=>"joe@gmail.com", "receiver_address"=>"Bellingham", "receiver_country"=>"Canada"}, "id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.5ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ? AND "parcels"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/parcels_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:44:in `update'
+  [1m[36mParcel Update (1.8ms)[0m  [1m[33mUPDATE "parcels" SET "receiver_address" = ?, "receiver_country" = ?, "updated_at" = ? WHERE "parcels"."id" = ?[0m  [["receiver_address", "Bellingham"], ["receiver_country", "Canada"], ["updated_at", "2023-08-09 16:27:02.179443"], ["id", 6]]
+  ↳ app/controllers/parcels_controller.rb:44:in `update'
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:44:in `update'
+Completed 200 OK in 50ms (Views: 0.4ms | ActiveRecord: 16.0ms | Allocations: 3330)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:27:02 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 1654)
+
+
+Started POST "/parcels" for ::1 at 2023-08-09 19:29:13 +0300
+Processing by ParcelsController#create as */*
+  Parameters: {"parcel"=>{"sender_name"=>"Hamza Muktar", "sender_email"=>"hamza@gmail.com", "sender_address"=>"600-505", "receiver_name"=>"Khristine", "receiver_email"=>"khristine@gmail.com", "receiver_address"=>"700-807", "receiver_country"=>"Canada", "weight"=>"50", "type_of_shipment"=>"air"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:20:in `create'
+  [1m[36mParcel Create (1.1ms)[0m  [1m[32mINSERT INTO "parcels" ("sender_name", "sender_email", "sender_address", "receiver_name", "receiver_email", "receiver_address", "receiver_country", "weight", "type_of_shipment", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["sender_name", "Hamza Muktar"], ["sender_email", "hamza@gmail.com"], ["sender_address", "600-505"], ["receiver_name", "Khristine"], ["receiver_email", "khristine@gmail.com"], ["receiver_address", "700-807"], ["receiver_country", "Canada"], ["weight", "50"], ["type_of_shipment", "air"], ["created_at", "2023-08-09 16:29:13.699622"], ["updated_at", "2023-08-09 16:29:13.699622"], ["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:20:in `create'
+Completed 201 Created in 32ms (Views: 0.4ms | ActiveRecord: 7.7ms | Allocations: 2677)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:29:20 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 15ms (Views: 7.4ms | ActiveRecord: 0.7ms | Allocations: 1832)
+
+
+Started POST "/api/login" for ::1 at 2023-08-09 19:39:59 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"ivy@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"ivy@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ivy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:8:in `login'
+Completed 401 Unauthorized in 18ms (Views: 0.5ms | ActiveRecord: 2.7ms | Allocations: 656)
+
+
+Started POST "/api/login" for ::1 at 2023-08-09 19:41:08 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"esther@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"esther@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "esther@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:8:in `login'
+Completed 200 OK in 320ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 622)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:41:21 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.5ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 1.3ms | Allocations: 1332)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:41:27 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1246)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:41:58 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.1ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1246)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:42:33 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.1ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 2.3ms | Allocations: 1246)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:45:24 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 12ms (Views: 2.5ms | ActiveRecord: 4.7ms | Allocations: 1246)
+
+
+Started POST "/api/login" for ::1 at 2023-08-09 19:45:48 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"hamza@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"hamza@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hamza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:8:in `login'
+Completed 200 OK in 320ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 606)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:45:55 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 1831)
+
+
+Started GET "/api/v1/shipments/56887" for 127.0.0.1 at 2023-08-09 19:47:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/shipments/56887"):
+  
+Started POST "/api/login" for ::1 at 2023-08-09 19:50:29 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"kris@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"kris@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kris@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:8:in `login'
+Completed 200 OK in 304ms (Views: 0.2ms | ActiveRecord: 11.9ms | Allocations: 605)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:50:36 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 1638)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:51:05 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 14ms (Views: 3.9ms | ActiveRecord: 1.5ms | Allocations: 1636)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-09 19:53:10 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 1636)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 11:18:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"esther@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"esther@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "esther@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:8:in `login'
+Completed 200 OK in 314ms (Views: 0.9ms | ActiveRecord: 1.6ms | Allocations: 41921)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 11:18:44 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 26ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 9779)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 11:18:48 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.1ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1264)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 11:20:16 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1264)
+
+
+Started POST "/api/login" for ::1 at 2023-08-10 11:34:36 +0300
+Processing by Api::AuthController#login as */*
+  Parameters: {"email"=>"hamza@gmail.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"hamza@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hamza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:8:in `login'
+Completed 200 OK in 328ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 753)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 11:34:46 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (1.1ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 135ms (Views: 125.2ms | ActiveRecord: 2.9ms | Allocations: 20051)
+
+
+Started POST "/parcels" for ::1 at 2023-08-10 11:36:09 +0300
+Processing by ParcelsController#create as */*
+  Parameters: {"parcel"=>{"sender_name"=>"evra", "sender_email"=>"evra@gmail.com", "sender_address"=>"600-505", "receiver_name"=>"Hamza Muktar", "receiver_email"=>"hamza@gmail.com", "receiver_address"=>"600-505", "receiver_country"=>"Canada", "weight"=>"50", "type_of_shipment"=>"air"}}
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parcels_controller.rb:20:in `create'
+  [1m[36mParcel Create (24.1ms)[0m  [1m[32mINSERT INTO "parcels" ("sender_name", "sender_email", "sender_address", "receiver_name", "receiver_email", "receiver_address", "receiver_country", "weight", "type_of_shipment", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["sender_name", "evra"], ["sender_email", "evra@gmail.com"], ["sender_address", "600-505"], ["receiver_name", "Hamza Muktar"], ["receiver_email", "hamza@gmail.com"], ["receiver_address", "600-505"], ["receiver_country", "Canada"], ["weight", "50"], ["type_of_shipment", "air"], ["created_at", "2023-08-10 08:36:09.695359"], ["updated_at", "2023-08-10 08:36:09.695359"], ["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parcels_controller.rb:20:in `create'
+Completed 201 Created in 96ms (Views: 3.4ms | ActiveRecord: 49.3ms | Allocations: 2826)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 11:36:14 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.2ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 2027)
+
+
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 11:36:49 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.3ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 1.2ms | Allocations: 2027)
+
+
+Started GET "/api/v1/shipments/54654" for 127.0.0.1 at 2023-08-10 11:37:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/shipments/54654"):
+  
+Started GET "/parcels" for 127.0.0.1 at 2023-08-10 12:02:39 +0300
+Processing by ParcelsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `authenticate_request'
+  [1m[36mParcel Load (0.7ms)[0m  [1m[34mSELECT "parcels".* FROM "parcels" WHERE "parcels"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/parcels_controller.rb:12:in `index'
+Completed 200 OK in 34ms (Views: 6.2ms | ActiveRecord: 3.9ms | Allocations: 2228)
+
+
