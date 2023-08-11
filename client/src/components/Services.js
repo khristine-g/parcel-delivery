@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <div className="full-page">
       <h3 id="pg-title">What we do</h3>
-      <h1 style={{ color: "#ccc" }}> Our Services</h1>
+      <h1 style={{ color: "#000" }}> Our Services</h1>
       <div className="card-container">
         {/* First Card */}
         <div className="card">
@@ -20,7 +20,7 @@ const Services = () => {
               Our service is founded on the commitment, dedication and
               professionalism, and we keep to all standards of quality.
             </p>
-            <button>Learn More</button>
+            {/* <button>Learn More</button> */}
           </div>
         </div>
 
@@ -36,7 +36,7 @@ const Services = () => {
               Our service is founded on the commitment, dedication and
               professionalism, and we keep to all standards of quality..
             </p>
-            <button>Learn More</button>
+            {/* <button>Learn More</button> */}
           </div>
         </div>
 
@@ -52,7 +52,7 @@ const Services = () => {
               Our service is founded on the commitment, dedication and
               professionalism, and we keep to all standards of quality.
             </p>
-            <button>Learn More</button>
+            {/* <button>Learn More</button> */}
           </div>
         </div>
       </div>

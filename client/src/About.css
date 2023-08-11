@@ -1,12 +1,12 @@
 .about-page {
-  background-color: #333;
+  background-color: #fefafa;
   margin-top: 100px;
 }
 .about-card-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #333;
+  background-color: #fdfcfc;
   margin: 25px;
 }
 
@@ -14,7 +14,7 @@
   flex: 0 0 calc(33.33% - 20px);
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #333;
+  background-color: #faf7f7;
 }
 
 .about-card img {
@@ -28,13 +28,13 @@
 .about-card-content h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #ccc;
+  color: #0d0d0d;
 }
 
 .about-card-content p {
   font-size: 16px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #0a0a0a;
 }
 
 .about-card-content button {
@@ -58,7 +58,7 @@ h6 {
 }
 
 #pg-title {
-  color: #0056b3;
+  color: #0f0f0f;
   display: flex;
   justify-content: center;
 }

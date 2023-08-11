@@ -65,7 +65,7 @@ const ParcelDetails = () => {
       {parcels.length === 0 ? (
         <p>No parcels found.</p>
       ) : (
-        <Table className="table table-primary" striped bordered hover>
+        <Table id="t-parcel">
           <thead>
             <tr>
               <th>Parcel ID</th>

@@ -7,10 +7,13 @@ function Footer() {
         <div className="footer-col" id="details">
           <h1>Translogic</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-            quia autem eveniet dicta id aliquid reprehenderit consectetur minima
-            odio est nemo quidem obcaecati perferendis repudiandae, optio itaque
-            similique vitae nostrum.
+            Embark on a journey that transcends conventional boundaries. Our app
+            is more than just a tool; it's your gateway to a connected ecosystem
+            of suppliers, shippers, carriers, and receivers, all working in
+            harmony to ensure your cargo reaches its destination with precision
+            and punctuality. Gone are the days of navigating through convoluted
+            processes and communication gaps. With our app, you're in control,
+            armed with real-time insights and data-driven decision-making tools.
           </p>
         </div>
 
@@ -28,7 +31,7 @@ function Footer() {
       </div>
       <div id="social-links">
         <div>
-          <p>ThemeREX © 2023. All rights reserved.</p>
+          <p>SendIT © 2023. All rights reserved.</p>
         </div>
         <div id="icons">
           <span>

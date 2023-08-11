@@ -70,3 +70,14 @@ code {
   grid-template-columns: auto auto auto;
   padding-top: 3em;
 }
+
+/* #t-parcel {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  border: red solid;
+  padding: 5px;
+} */
+#admin-dashboard h2 {
+  color: blue;
+}

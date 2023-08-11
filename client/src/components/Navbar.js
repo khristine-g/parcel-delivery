@@ -11,6 +11,7 @@ const Navbar = () => {
         width={50}
         alt=""
       />
+
       <ul className="navbar-links">
         <li>
           <Link to="/">Home</Link>

@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="about-page">
       <h3 id="pg-title">Who We Are</h3>
-      <h1 style={{ color: "#ccc" }}>Our Team</h1>
+      <h1 style={{ color: "#000" }}>Our Team</h1>
       <p style={{ color: "#fff" }}>
         Our long history of unparalleled commitment to partnering with the most
         extensive <br></br>carriers and our ability to offer the most versatile
