@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     member do
       put 'update_destination'
       put 'update_status_and_location'
+      delete 'cancel', to: 'parcels#cancel'
     end
     collection do
       get 'admin_dashboard' # Add the admin dashboard action to the collection
@@ -35,6 +36,8 @@ Rails.application.routes.draw do
 
 
   get '/parcels/:tracking_number', to: 'parcels#track'
+
+
 
   get '/send_sms', to: 'sms#send_sms'
 
