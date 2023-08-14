@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table, Form, Button } from "react-bootstrap";
+import "../AdminDashboard.css";
 
 const AdminDashboard = () => {
   const [parcels, setParcels] = useState([]);

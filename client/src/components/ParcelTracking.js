@@ -33,6 +33,12 @@ const ParcelTracking = () => {
   };
 
   const handleCancelParcel = async () => {
+    // Check if user is authenticated
+    if (!jwtToken) {
+      setErrorMsg("You must be logged in to cancel a parcel.");
+      return;
+    }
+
     if (parcelInfo && parcelInfo.status === "pending") {
       try {
         const response = await fetch(`/parcels/${parcelInfo.id}`, {
@@ -97,53 +103,3 @@ const ParcelTracking = () => {
 };
 
 export default ParcelTracking;
-
-// import React, { useState } from 'react';
-
-// const ShipmentTracking = () => {
-//   const [trackingNumber, setTrackingNumber] = useState('');
-//   const [shipmentData, setShipmentData] = useState(null);
-//   const [isLoading, setIsLoading] = useState(false);
-//   const [error, setError] = useState(null);
-
-//   const handleFormSubmit = async (e) => {
-//     e.preventDefault();
-//     setIsLoading(true);
-//     setError(null);
-
-//     try {
-//       const response = await fetch(`/api/v1/shipments/${trackingNumber}`);
-//       if (!response.ok) {
-//         throw new Error('Shipment not found');
-//       }
-//       const data = await response.json();
-//       setShipmentData(data);
-//     } catch (error) {
-//       console.error(error);
-//       setError('Shipment not found');
-//       setShipmentData(null);
-//     } finally {
-//       setIsLoading(false);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <form onSubmit={handleFormSubmit}>
-//         <input type="text" value={trackingNumber} onChange={(e) => setTrackingNumber(e.target.value)} />
-//         <button type="submit">Track Shipment</button>
-//       </form>
-//       {isLoading && <p>Loading...</p>}
-//       {error && <p>{error}</p>}
-//       {shipmentData && (
-//         <div>
-//           <p>Status: {shipmentData.status}</p>
-//           <p>Delivery Date: {shipmentData.delivery_date}</p>
-//           {/* Display other shipment details as needed */}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ShipmentTracking;

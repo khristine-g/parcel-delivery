@@ -6,7 +6,7 @@ ruby "2.7.4"
 gem 'rack-cors'
 gem 'jwt', "~> 2.3"
 
-gem 'africas_talking'
+gem 'africastalking-ruby'
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
