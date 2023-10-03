@@ -13282,3 +13282,24 @@ Completed 200 OK in 118ms (Views: 30.7ms | ActiveRecord: 0.8ms | Allocations: 29
 Completed 200 OK in 132ms (Views: 42.4ms | ActiveRecord: 17.5ms | Allocations: 34475)
 
 
+Started GET "/ws" for ::1 at 2023-10-03 11:58:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/parcels/admin_dashboard" for 127.0.0.1 at 2023-10-03 11:59:07 +0300
+Started GET "/parcels" for 127.0.0.1 at 2023-10-03 11:59:07 +0300
+Processing by ParcelsController#admin_dashboard as */*
+Processing by ParcelsController#index as */*
+Filter chain halted as :authenticate_request rendered or redirected
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 142ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 901)
+
+
+Completed 401 Unauthorized in 142ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 854)
+
+
+Started GET "/ws" for ::1 at 2023-10-03 11:59:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
