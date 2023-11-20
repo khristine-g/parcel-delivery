@@ -1,33 +1,32 @@
 .tracking-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-  }
-  
-  .image-container img {
-    width: 600px; /* Adjust the image width as needed */
-    height: 500px;
-    object-fit: cover; /* Adjust the image height as needed */
-    margin-left: 50px;
-  }
-  
-  .info-container {
-    flex: 1; /* Allows the container to fill the remaining space */
-    margin-left: 20px; /* Add space between the image and information */
-  }
-  .info-container button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
 
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 64px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  .info-container button:hover{
-    background-color: #0056b3;
-  }
+.image-container img {
+  width: 600px; /* Adjust the image width as needed */
+  height: 500px;
+  object-fit: cover; /* Adjust the image height as needed */
+  margin-left: 50px;
+}
 
-  
+.info-container {
+  flex: 1; /* Allows the container to fill the remaining space */
+  margin-left: 20px; /* Add space between the image and information */
+}
+.info-container button{
+
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 64px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.info-container button:hover{
+  background-color: #0056b3;
+}
+

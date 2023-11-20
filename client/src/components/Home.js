@@ -4,10 +4,10 @@ import About from "./About";
 import Services from "./Services";
 import Tracking from "./Tracking";
 import Shipping from "./Shipping";
-import Parcel from "./Parcel";
-import Footer from "./footer/footer";
+
+
 import Advantages from "./Advantages";
-import Quote from "./Quote";
+
 
 function Home() {
   return (
@@ -88,7 +88,7 @@ function Home() {
       <Advantages />
       <About />
 
-      <Footer />
+    
     </div>
   );
 }

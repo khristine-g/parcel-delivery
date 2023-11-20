@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
-function Dap() {
+function Map() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyA6_uYX3TQ2UB_niV-bxgSGI5hJDyYNYTk",
   });
@@ -25,4 +25,4 @@ function Map() {
     </div>
   );
 }
-export default Dap;
+export default Map;

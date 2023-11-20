@@ -9,9 +9,9 @@ import Parcel from "./components/Parcel";
 import Shipping from "./components/Shipping";
 import Quote from "./components/Quote";
 import ShipmentTracking from "./components/ShipmentTracking";
-import Footer from "./components/footer/footer";
+
 import SignupPage from "./components/signup/Signup";
-import Dap from "./components/Map";
+
 import LoginPage from "./components/login/Login";
 import UpdateDestination from "./components/UpdateDestination";
 import ParcelDetails from "./components/ParcelDetails";
