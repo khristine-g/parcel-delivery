@@ -25,9 +25,9 @@ test:
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: your_production_database_name
-  username: your_production_database_username
-  password: your_production_database_password
+  database: d2c7p01r0iq7mk
+  username: arfewzlcvmyoaf
+  password: 94184f4a132d04615dfe94e1c99a5074ae8f90bd5464ccd1360c517f01c0be29
 
 
   production:
