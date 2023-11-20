@@ -3,21 +3,25 @@
   display: flex;
   gap: 50px;
   /* border: 1px solid black; */
-  margin: 40px;
-  background-color:  #f0f0f1;
+  margin: 0;
+  background-color: #f0f0f1;
+  background-image: url("https://assets.entrepreneur.com/content/3x2/2000/20190625122850-7-Steps-To-Starting-A-Transport-And-Logistics-Business-4000pxW-X-2670pxH-copy.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .form-section {
- 
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 25px;
   background-color: #333;
   margin: 20px;
- 
-   /* position: relative; */
-} 
+
+  /* position: relative; */
+}
 
 .form-section h2 {
   margin-bottom: 15px;
@@ -45,7 +49,8 @@ select {
 
 select {
   appearance: none;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>') no-repeat right 8px center;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>')
+    no-repeat right 8px center;
   background-size: 16px 16px;
   padding-right: 30px;
 }

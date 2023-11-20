@@ -1,7 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { BsBox, BsFillEnvelopeFill, BsCurrencyDollar, BsArrowRightCircle } from 'react-icons/bs';
-import '../Shipping.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  BsBox,
+  BsFillEnvelopeFill,
+  BsCurrencyDollar,
+  BsArrowRightCircle,
+} from "react-icons/bs";
+import "../Shipping.css";
 
 const Shipping = () => {
   return (

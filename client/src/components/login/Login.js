@@ -13,9 +13,9 @@ const LoginPage = () => {
 
   const handleLogin = () => {
     setIsLoading(true);
-  
+
     let userObj = { email, password };
-  
+
     fetch("http://localhost:3000/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -35,21 +35,21 @@ const LoginPage = () => {
       })
       .then((data) => {
         // Store the JWT token in localStorage
-        localStorage.setItem('jwtToken', data.token);
-        console.log('JWT Token:', data.token);
-        
+        localStorage.setItem("jwtToken", data.token);
+        console.log("JWT Token:", data.token);
+
         setIsLoggedIn(true);
         setIsLoading(false);
-        navigate("/home");
+        // navigate("/home");
       })
       .catch((error) => {
         console.error("Error sending login data:", error);
       });
   };
-  
+
   if (isLoggedIn) {
     // Use the if block to conditionally redirect if needed
-    return navigate("/home"); // Use navigate() instead of <Redirect>
+    return navigate("/"); // Use navigate() instead of <Redirect>
   }
 
   return (

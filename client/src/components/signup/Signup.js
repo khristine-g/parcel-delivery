@@ -34,7 +34,7 @@ const SignupPage = () => {
             setIsLoading(false);
             setSignedUp(true);
             alert("Signup successful");
-            navigate("/"); // Navigate to home after successful signup
+            // navigate("/"); // Navigate to home after successful signup
           } else {
             setIsLoading(false);
             return response.json().then((error) => {
@@ -50,6 +50,10 @@ const SignupPage = () => {
       alert("Password must match");
     }
   };
+
+  if (isSignedUp) {
+    return navigate("/login");
+  }
 
   return (
     <main id="signup-page">

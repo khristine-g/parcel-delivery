@@ -1,13 +1,83 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* #receipt-section {
+  height: 20em;
+  width: 100vw;
+  background-color: #f9f9f9;
+  display: grid;
+  place-items: center;
+}
+#receipt {
+  height: 18em;
+  width: 70%;
+}
+
+.receipt-row {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+} */
+
+#admin-dashboard {
+  padding-top: 5em;
+}
+
+#parcel-details {
+  padding-top: 5em;
+}
+
+#parcel-tracking {
+  padding-top: 6em;
+}
+
+#parcel-info {
+  height: 15em;
+  width: 100vw;
+  /* background-color: #f9f9f9; */
+  display: grid;
+  place-items: center;
+  /* border: black solid; */
+}
+#parcel-row {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#p-row {
+  height: 18em;
+  width: 70%;
+}
+#all-form {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 3em;
+}
+
+/* #t-parcel {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  border: red solid;
+  padding: 5px;
+} */
+#admin-dashboard h2 {
+  color: blue;
 }

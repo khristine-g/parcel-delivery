@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap';
-import UpdateDestination from './UpdateDestination';
+import React, { useState, useEffect } from "react";
+import { Table } from "react-bootstrap";
+import UpdateDestination from "./UpdateDestination";
 
 const ParcelDetails = () => {
   const [parcels, setParcels] = useState([]);
@@ -9,14 +9,14 @@ const ParcelDetails = () => {
 
   const fetchParcels = async () => {
     try {
-      const response = await fetch('/parcels', {
+      const response = await fetch("/parcels", {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
+          Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
         },
       });
 
       if (!response.ok) {
-        throw new Error('Failed to fetch parcels');
+        throw new Error("Failed to fetch parcels");
       }
 
       const data = await response.json();
@@ -33,10 +33,10 @@ const ParcelDetails = () => {
   const handleUpdateDestination = async (updatedParcel) => {
     try {
       const response = await fetch(`/parcels/${updatedParcel.id}`, {
-        method: 'PUT',
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
         },
         body: JSON.stringify({
           parcel: {
@@ -49,23 +49,23 @@ const ParcelDetails = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to update parcel destination');
+        throw new Error("Failed to update parcel destination");
       }
 
-      console.log('Parcel destination updated successfully');
+      console.log("Parcel destination updated successfully");
       fetchParcels(); // Refresh the parcel data after successful update
     } catch (error) {
-      console.error('Error updating parcel destination:', error);
+      console.error("Error updating parcel destination:", error);
     }
   };
 
   return (
-    <div>
+    <div id="parcel-details">
       <h2>My Shipments</h2>
       {parcels.length === 0 ? (
         <p>No parcels found.</p>
       ) : (
-        <Table className="table table-primary" striped bordered hover>
+        <Table id="t-parcel">
           <thead>
             <tr>
               <th>Parcel ID</th>
@@ -76,7 +76,6 @@ const ParcelDetails = () => {
               <th>Parcel Weight</th>
               <th>Type of Shipment</th>
               <th>Change destination</th>
-              
             </tr>
           </thead>
           <tbody>
@@ -89,9 +88,11 @@ const ParcelDetails = () => {
                 <td>{parcel.receiver_country}</td>
                 <td>{parcel.weight}</td>
                 <td>{parcel.type_of_shipment}</td>
-
                 <td>
-                  <UpdateDestination parcel={parcel} onUpdateDestination={handleUpdateDestination} />
+                  <UpdateDestination
+                    parcel={parcel}
+                    onUpdateDestination={handleUpdateDestination}
+                  />
                 </td>
               </tr>
             ))}
@@ -103,4 +104,3 @@ const ParcelDetails = () => {
 };
 
 export default ParcelDetails;
-
